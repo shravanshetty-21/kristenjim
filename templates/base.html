@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style="font-size: 12px">
+    <head>
+        <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="custom.css">
+    </head>
+    <body>
+        <header>
+            {% include "topbar.html" %}
+        </header>
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+        <footer>
+            {% include "footer.html" %}
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+        //copy email
+            function copyEmail() {
+                const email = "krisjimalb@gmail.com";
+                navigator.clipboard.writeText(email).then(() => {
+                    alert("Email copied to clipboard!");
+                }).catch(err => {
+                    console.error("Error copying text: ", err);
+                });
+            }
+        // work redirect
+            document.getElementById("showMoreBtn").addEventListener("click", function() {
+                window.location.href = "{% url 'portfolio:work' %}";
+            });
+
+        // about redirect
+            document.getElementById("showaboutMoreBtn").addEventListener("click", function() {
+                window.location.href = "{% url 'portfolio:about' %}";
+            });
+
+
+
+        //Scroll
+           let lastScrollTop = 0; // Variable to store the last scroll position
+            const navbar = document.getElementById('mainNavbar'); // Get the navbar element
+            const navbarHeight = navbar.offsetHeight; // Get the height of the navbar
+
+            window.addEventListener('scroll', function() {
+                let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get current scroll position
+
+                if (scrollTop > lastScrollTop) {
+                    // Scroll down: hide the navbar
+                    navbar.style.top = `-${navbarHeight}px`; // Move navbar out of view
+                } else {
+                    // Scroll up: show the navbar
+                    navbar.style.top = '0'; // Bring navbar back into view
+                }
+
+                lastScrollTop = scrollTop; // Update the last scroll position
+            });
+
+
+ document.addEventListener("DOMContentLoaded", function() {
+        const contactLink = document.querySelector(".contact-link");
+
+        contactLink.addEventListener("click", function() {
+            // Remove 'active' class from all nav links
+            document.querySelectorAll(".nav-link").forEach(link => link.classList.remove("active"));
+            // Add 'active' class to Contact link
+            contactLink.classList.add("active");
+        });
+    });
+        </script>
+    </body>
+</html>
