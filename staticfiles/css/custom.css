@@ -1,0 +1,803 @@
+body {
+    font-family: 'Satoshi', sans-serif;
+}
+/* Existing CSS (unchanged) */
+/* Existing CSS (unchanged) */
+.navbar-custom {
+    width: 33%; 
+    height: auto; 
+    border-radius: 4rem; /* 66px converted */
+    padding: 1.5rem 2.5rem; /* 23px top/bottom, 40px left/right */
+    background-color: rgb(0, 0, 0); /* Light background */
+    color: rgb(255, 255, 255);   
+    text-align: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 1.8rem; /* 18px */
+    line-height: 1;
+    letter-spacing: -0.011rem; /* -1.1% of font size */
+    color: rgb(143, 143, 143);
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255);
+}
+
+.navbar-nav {
+    list-style: none !important;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem; /* Adjust spacing between items */
+}
+
+.nav-link.active {
+    color: white !important;
+}
+
+.navbar-toggler {
+    border: none; /* Remove default border */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navbar-custom {
+        width: 90%; /* Full width for mobile */
+        border-radius: 2rem; /* Smaller border radius for mobile */
+        padding: 1rem; /* Reduce padding for mobile */
+    }
+
+    .navbar-nav {
+        flex-direction: column; /* Stack nav items vertically */
+        gap: 0.5rem; /* Reduce gap between items */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .nav-item {
+        width: 100%; /* Full width for each nav item */
+    }
+
+    .nav-link {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        padding: 0.5rem 0; /* Add padding for better touch targets */
+    }
+
+    .navbar-toggler {
+        margin-left: auto; /* Align toggler to the right */
+    }
+
+    .navbar-collapse {
+        background-color: rgb(0, 0, 0); /* Match navbar background */
+        border-radius: 1rem; /* Add border radius for collapsed menu */
+        padding: 1rem; /* Add padding for collapsed menu */
+        margin-top: 1rem; /* Add spacing between toggler and menu */
+    }
+}
+/* Existing CSS (unchanged) */
+.page-container {
+    margin-top: 7rem;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.custom-heading-container {
+    display: flex;
+    justify-content: center;
+    width: 88%;
+    gap: 1.5rem;
+}
+
+.custom-heading {
+    width: 88%; /* 1269px relative to 1440px */
+    font-size: 12.5em; /* Responsive heading */
+    font-weight: 540;
+}
+
+.circle-button {
+    width: 15%; /* Adjust based on your design needs */
+    height: 15%; /* Maintain a square aspect ratio */
+    aspect-ratio: 1 / 1; /* Ensures the button stays circular */
+    margin-top: 6%; /* Adjust based on your layout */
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center content vertically */
+    color: white;
+    font-size: 1.5vw; /* Use viewport units for font size */
+    cursor: pointer;
+}
+
+.division-line {
+    background-color: #E0E0E0;
+    height: 2px;  /* Thickness of the line */
+    width: calc(100% - 20rem); /* Adjusts width to avoid full screen */
+    margin-top: 10rem; /* Adds space above */
+}
+
+.side-heading {
+    font-size: 4.5rem;
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: #F8F8F8;
+    font-size: 1.5rem;
+    height: 4.5rem;
+    padding: 0.5rem 2rem;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.btn-primary:hover {
+    background-color: black;
+    color: white !important;
+}
+
+.home-separator {
+    width: 100%;
+    height: 2px; /* Adjust thickness */
+    background-color: #E0E0E0; /* Adjust color */
+    margin: 20px 0; /* Adjust spacing */
+    margin-top: 10rem;
+}
+
+/* Ensure captions align with images */
+.image-caption-left, .image-caption-right {
+    width: calc(100% - 10rem); /* Matches image width */
+    text-align: center;
+    margin: 6rem auto;
+}
+
+/* Remove absolute positioning */
+.image-caption-right {
+    position: relative;
+    top: auto;
+    right: auto;
+    transform: none;
+}
+
+/* Fix portfolio-item display */
+.portfolio-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hover effects */
+.underline, .view-case-study {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.underline {
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+}
+
+.view-case-study {
+    font-size: 1.2rem;
+    color: gray;
+    font-weight: 500;
+}
+
+.portfolio-item:hover .underline {
+    width: 100%;
+    opacity: 1;
+}
+
+.portfolio-item:hover .view-case-study {
+    opacity: 1;
+}
+
+/* About section */
+.about-side-heading {
+    font-size: 7.5rem;
+    font-weight: 600;
+}
+
+.about-image {
+    width: 90%; /* Ensures it scales properly */
+    height: 110%;
+}
+
+.download-btn {
+    background-color: black;
+    color: white;
+    font-size: 1.5rem;
+    height: 4.5rem;
+    padding: 1.1rem 2rem;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.download-btn:hover {
+    background-color: #F8F8F8;
+    color: black !important;
+}
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .custom-heading-container {
+        display: flex;
+        justify-content: space-between; /* Push heading to the left and button to the right */
+        align-items: center; /* Align items vertically */
+        width: 100%; /* Ensure the container takes full width */
+        gap: 1rem; /* Add some spacing between heading and button */
+        padding: 0 5%; /* Add padding to align with the rest of the content */
+    }
+
+    .custom-heading {
+        font-size: 4rem; /* Smaller font size for mobile */
+        width: auto; /* Allow heading to take up required space */
+        text-align: left; /* Align heading to the left */
+        white-space: normal; /* Allow heading to wrap into multiple lines */
+        line-height: 1.2; /* Adjust line height for better readability */
+        max-width: 70%; /* Limit heading width to allow space for the button */
+    }
+
+    .circle-button {
+        width: 8rem; /* Smaller button size for mobile */
+        height: 7.5rem; /* Smaller button size for mobile */
+        margin-top: -12%; /* Remove top margin */
+    }
+
+    .portfolio-email {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        margin-top: 2rem; /* Adjust top margin */
+    }
+
+    .custom-paragraph {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+        text-align: left; /* Align text to the left */
+    }
+
+
+    .side-heading {
+        font-size: 2.5rem; /* Smaller font size for mobile */
+        text-align: left; /* Align heading to the left */
+        white-space: nowrap; /* Allow heading to wrap */
+        max-width: 70%; /* Limit heading width to allow space for the button */
+        margin: 0;
+    }
+
+    .btn-primary {
+        font-size: 1.2rem;
+        height: 3.5rem;
+        padding: 0.5rem 1.5rem;
+        margin-left: auto;
+        white-space: nowrap; /* Prevent button text from wrapping */
+        margin: 0;
+    }
+
+    .home-separator {
+        margin-top: 5rem;
+    }
+
+    .about-side-heading {
+        font-size: 4rem; /* Smaller font size for mobile */
+    }
+
+    .about-image {
+        width: 100%; /* Full width on mobile */
+        height: auto;
+    }
+
+    .resume-description {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .download-btn {
+        font-size: 1.2rem;
+        height: 3.5rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .portfolio-item {
+        margin-bottom: 2rem; /* Add spacing between stacked items */
+    }
+
+    .work-image-container {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 2rem; /* Add spacing between stacked items */
+    }
+
+    .work-image-caption, .view-work-case-study {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+}
+
+
+
+/* Existing CSS (unchanged) */
+.footer {
+    background-color: #000000;
+    margin-top: 10rem;
+    overflow: hidden;
+}
+
+@keyframes moveLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.motion-footer {
+    font-size: 17rem;
+    margin-left: 10rem;
+    white-space: nowrap;
+    display: inline-block;
+    animation: moveLeft 15s linear infinite;
+}
+
+.get-in-touch {
+    margin-left: 10rem;
+    height: 4.5rem;
+    padding: 0.8rem 2rem;
+    border: none;
+    font-weight: bold;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.get-in-touch:hover {
+    background-color: rgb(234, 234, 234);
+    color: black;
+}
+
+.available-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+}
+
+.bi-circle-fill {
+    color: rgb(255, 255, 255);
+}
+
+.email-text {
+    margin-right: 10rem;
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255);
+}
+
+.social-section {
+    margin-top: 6rem;
+}
+
+.social {
+    margin-left: 10rem;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+.social-text {
+    margin-right: 10rem;
+    color: #fff;
+    font-size: 2.4rem;
+    max-width: 40rem;
+    text-align: right;
+    margin-left: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .footer {
+        margin-top: 5rem; /* Reduce top margin for mobile */
+        padding: 2rem; /* Add padding for better spacing */
+    }
+
+    .motion-footer {
+        font-size: 6rem; /* Smaller font size for mobile */
+        margin-left: 2rem; /* Reduce left margin for mobile */
+        animation: moveLeft 10s linear infinite; /* Faster animation for mobile */
+    }
+
+    /* Adjust the "Get in touch" and "Available for work" section */
+    .d-flex.align-items-center.justify-content-between {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .d-flex.align-items-center {
+        margin-bottom: 1rem; /* Add spacing between button and email */
+    }
+
+    .get-in-touch {
+        margin-left: 0; /* Remove left margin for mobile */
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        height: auto; /* Allow button height to adjust */
+        padding: 0.5rem 1.5rem; /* Adjust padding for mobile */
+        white-space: nowrap; /* Prevent text wrapping */
+    }
+
+    .available-text {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        margin-left: 1rem; /* Adjust spacing */
+    }
+
+    .email-text {
+        margin-right: 49%; /* Remove right margin for mobile */
+        font-size: 1.4rem; /* Smaller font size for mobile */
+        display: block; /* Move email to the next line */
+        margin-top: 1rem; /* Add spacing between button and email */
+    }
+
+    .social-section {
+        margin-top: 3rem; /* Reduce top margin for mobile */
+        flex-direction: column; /* Stack social links and text vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .social {
+        margin-left: 2rem; /* Reduce left margin for mobile */
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        margin-bottom: 1.5rem; /* Reduce bottom margin for mobile */
+    }
+
+    .social-text {
+        margin-right: 2rem; /* Reduce right margin for mobile */
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        max-width: 100%; /* Full width for mobile */
+        text-align: left; /* Align text to the left */
+        margin-left: 2rem; /* Add left margin for consistency */
+        margin-top: 2rem; /* Add top margin for spacing */
+    }
+}
+
+/* Existing CSS (unchanged) */
+.page-container {
+    margin-top: 7rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
+}
+
+.work-heading {
+    font-size: 13rem;
+}
+
+.work-image-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Existing CSS (unchanged) */
+.work-image-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 45%; /* Adjust width as needed */
+    transition: transform 0.3s ease-in-out, margin-bottom 0.3s ease-in-out; /* Smooth transitions */
+    margin-bottom: 20px; /* Add some initial margin to separate images */
+}
+
+.work-image-container:hover {
+    transform: scale(1.05); /* Slightly enlarge the image */
+    margin-bottom: 40px; /* Push the content below down */
+}
+
+.work-image-container img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transitions */
+}
+
+.work-image-container:hover img {
+    opacity: 0.7; /* Optional: Reduce image opacity on hover */
+}
+
+.hover-icon {
+    position: absolute;
+    bottom: 10rem;
+    right: 5rem;
+    font-size: 7rem;
+    color: black;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.work-image-container:hover .hover-icon {
+    opacity: 1;
+}
+
+.work-image-caption {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.work-image-caption::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+}
+
+.work-image-container:hover .work-image-caption::after {
+    width: 100%;
+}
+
+.view-work-case-study {
+    font-size: 1.5rem;
+    color: #a6a6a6;
+    margin-top: -3px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.work-image-container:hover .view-work-case-study {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fade-in-out {
+    0% { opacity: 0; }
+    30% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.work-image-caption {
+    font-size: 2.5rem;
+    margin-top: 10px;
+    text-align: left;
+    position: relative;
+}
+
+.work-image-caption::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s ease-in-out;
+}
+
+.work-image-container:hover .work-image-caption::after {
+    width: 100%;
+}
+
+.view-work-case-study {
+    font-size: 1.5rem;
+    color: #a6a6a6;
+    margin-top: -3px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.work-image-container:hover .view-work-case-study {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.work-separator {
+    width: 100%;
+    height: 2px;
+    background-color: #E0E0E0;
+    margin: 20px 0;
+    margin-bottom: 7rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-container {
+        margin-left: 2rem; /* Reduce left margin for mobile */
+        margin-right: 2rem; /* Reduce right margin for mobile */
+    }
+
+    .work-heading {
+        font-size: 6rem; /* Smaller font size for mobile */
+    }
+
+    .work-image-wrapper {
+        flex-direction: column; /* Stack images vertically */
+        gap: 1rem; /* Reduce gap for mobile */
+    }
+
+    .work-image-container {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 2rem; /* Add spacing between stacked images */
+    }
+
+    .work-image-caption {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+
+    .view-work-case-study {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .work-separator {
+        margin-bottom: 3rem; /* Reduce bottom margin for mobile */
+    }
+    .hover-icon {
+        position: absolute; /* Position the icon within the image container */
+        bottom: 6rem; /* Adjust bottom position */
+        right: 2rem; /* Adjust right position */
+        font-size: 2.5rem; /* Adjust icon size */
+        color: black; /* Icon color */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease-in-out; /* Smooth transition */
+        font-size: 5rem;
+    }
+}
+
+/* Existing CSS (unchanged) */
+.about-images-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+    margin-top: 10rem;
+}
+
+.about-image-container {
+    width: 24%; /* Ensures 4 images fit in one line */
+}
+
+.about-image-container img {
+    width: 100%; /* Makes sure image scales properly */
+    height: auto;
+}
+
+.experiecne-heading {
+    font-size: 12rem;
+}
+
+.experience-download-btn {
+    background-color: black;
+    font-size: 1.5rem;
+    height: 4.5rem;
+    padding: 0.5rem 2rem;
+    border: none;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    color: #ffff;
+}
+
+.experience-download-btn:hover {
+    background-color: #F8F8F8;
+    color: black !important;
+}
+
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    margin-left: 80rem;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.experience-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.experience-image {
+    width: 150px;
+    height: auto;
+}
+
+.experience-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.small-text {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.big-text {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .page-container {
+        margin-left: 2rem; /* Reduce left margin for mobile */
+        margin-right: 2rem; /* Reduce right margin for mobile */
+    }
+
+    .about-images-wrapper {
+        flex-wrap: wrap; /* Allow images to wrap to the next line */
+        gap: 0.5rem; /* Reduce gap for mobile */
+        margin-top: 5rem; /* Reduce top margin for mobile */
+    }
+
+    .about-image-container {
+        width: 48%; /* Two images per row on mobile */
+    }
+
+    .about-side-heading {
+        font-size: 4rem; /* Smaller font size for mobile */
+    }
+
+    .resume-description {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .experiecne-heading {
+        font-size: 6rem; /* Smaller font size for mobile */
+    }
+
+    .experience-section {
+        margin-left: 2rem; /* Reduce left margin for mobile */
+        padding: 1rem; /* Reduce padding for mobile */
+    }
+
+    .experience-item {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 1rem; /* Reduce gap for mobile */
+    }
+
+    .experience-image {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .small-text {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .big-text {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .experience-download-btn {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+        height: 3.5rem; /* Smaller button height for mobile */
+        padding: 0.5rem 1.5rem; /* Adjust padding for mobile */
+    }
+
+    /* Stack image and paragraph vertically on mobile */
+    .container-fluid.d-flex.w-100 {
+        flex-direction: column; /* Stack image and paragraph vertically */
+        align-items: center; /* Center-align items */
+    }
+
+    .col-md-6, .col-md-5 {
+        width: 100%; /* Full width for mobile */
+        text-align: center; /* Center-align text */
+    }
+
+    .col-md-6 img {
+        margin-bottom: 2rem; /* Add spacing between image and paragraph */
+    }
+}
+
