@@ -46,22 +46,41 @@
 
 
         //Scroll
-           let lastScrollTop = 0; // Variable to store the last scroll position
-            const navbar = document.getElementById('mainNavbar'); // Get the navbar element
-            const navbarHeight = navbar.offsetHeight; // Get the height of the navbar
+            document.addEventListener('DOMContentLoaded', function() {
+                const navbar = document.getElementById('mainNavbar');
+                let lastScrollPosition = 0;
+                const scrollThreshold = 100; // Adjust sensitivity (px)
+                
+                window.addEventListener('scroll', function() {
+                    const currentScrollPosition = window.pageYOffset;
+                    
+                    // Scroll down behavior
+                    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > scrollThreshold) {
+                        navbar.style.transform = 'translateY(-100%)';
+                        navbar.style.transition = 'transform 0.3s ease-out';
+                    } 
+                    // Scroll up behavior
+                    else if (currentScrollPosition < lastScrollPosition) {
+                        navbar.style.transform = 'translateY(0)';
+                        navbar.style.transition = 'transform 0.2s ease-out';
+                    }
+                    
+                    lastScrollPosition = currentScrollPosition;
+                });
+            });
 
-            window.addEventListener('scroll', function() {
-                let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Get current scroll position
-
-                if (scrollTop > lastScrollTop) {
-                    // Scroll down: hide the navbar
-                    navbar.style.top = `-${navbarHeight}px`; // Move navbar out of view
-                } else {
-                    // Scroll up: show the navbar
-                    navbar.style.top = '0'; // Bring navbar back into view
-                }
-
-                lastScrollTop = scrollTop; // Update the last scroll position
+            //Image auto scroll
+            document.addEventListener('DOMContentLoaded', function() {
+                const track = document.querySelector('.image-scroll-track');
+                
+                // Reset animation when it reaches the duplicated images
+                track.addEventListener('animationiteration', () => {
+                    track.style.transition = 'none';
+                    track.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0s linear';
+                    }, 0);
+                });
             });
         </script>
     </body>

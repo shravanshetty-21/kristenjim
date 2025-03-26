@@ -8,18 +8,18 @@
     <span class="work-heading fw-bold">ABOUT</span>
     <div class="work-separator"></div>
     <div class="about-side-heading fw-bold mt-5">Who am I beyond design?</div>  
-    <div class="container-fluid mt-5 d-flex w-100">
+    <div class="container-fluid mt-5 d-flex w-100 align-items-center">
         <!-- Left Side: Image -->
         <div class="col-md-6">
-            <img class="img-fluid about-image" src="{% static 'images/portfolio_3.png' %}" alt="Description">
+            <img class="img-fluid about-image" src="{% static 'images/aboutjim.png' %}" alt="Description">
         </div>
         
         <div class="col-md-1">
         </div>
 
         <!-- Right Side: Button & Paragraph -->
-        <div class="col-md-5 text-start ">
-            <p class="resume-description fs-2">
+        <div class="col-md-5 d-flex align-items-center text-start">
+            <p class="resume-description">
                 Beyond design, I stay active in different ways, whether it’s leading my local running club, hitting the gym, or playing sports. 
                 Music is a big part of my life too, I play and teach guitar, which has taught me patience and creativity in a whole new way.
                 <br><br>
@@ -30,25 +30,46 @@
         </div>
     </div>
 </div>
-<div class="about-images-wrapper w-100">
-    <div class="about-image-container">           
-        <img class="img-fluid about-image" src="{% static 'images/portfolio_3.png' %}" alt="Description">
-    </div>
-    <div class="about-image-container">           
-        <img class="img-fluid about-image" src="{% static 'images/portfolio_3.png' %}" alt="Description">
-    </div>
-    <div class="about-image-container">           
-        <img class="img-fluid about-image" src="{% static 'images/portfolio_3.png' %}" alt="Description">
-    </div>
-    <div class="about-image-container">           
-        <img class="img-fluid about-image" src="{% static 'images/portfolio_3.png' %}" alt="Description">
+<div class="about-images-wrapper">
+    <div class="image-scroll-container">
+        <div class="image-scroll-track">
+            <!-- Original 6 images -->
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim1.jpg' %}" alt="Jim 1">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim2.png' %}" alt="Jim 2">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim3.png' %}" alt="Jim 3">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim4.png' %}" alt="Jim 4">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim5.png' %}" alt="Jim 5">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim6.png' %}" alt="Jim 6">
+            </div>
+            <!-- First 3 images duplicated (creates seamless loop) -->
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim1.jpg' %}" alt="Jim 1">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim2.png' %}" alt="Jim 2">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim3.png' %}" alt="Jim 3">
+            </div>
+        </div>
     </div>
 </div>
 <div class="page-container">
     <div class="work-separator"></div>  
     <span class="experiecne-heading fw-bold">Experience</span>
     <div class="downlaod-button">
-    <button class="btn experience-download-btn mt-5 fw-bold"><i class="bi bi-download me-2"></i> Download Resume</button>
+    <button class="btn experience-download-btn mt-5"><i class="bi bi-download me-2"></i> Download Resume</button>
     </div>
 
         <div class="experience-section">
