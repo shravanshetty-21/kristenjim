@@ -379,21 +379,29 @@ body {
     overflow: hidden;
 }
 
-@keyframes moveLeft {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
+.motion-footer-container {
+    width: 100%;
+    overflow: hidden;
 }
 
 .motion-footer {
     font-size: 20rem;
-    margin-left: 10rem;
     white-space: nowrap;
     display: inline-block;
-    animation: moveLeft 15s linear infinite;
+    animation: moveRightLeft 25s linear infinite;
+    padding-left: 100%; /* Start with text off-screen */
+}
+
+@keyframes moveRightLeft {
+    0% {
+        transform: translateX(0); /* Start off-screen right */
+    }
+    50% {
+        transform: translateX(-100%); /* Move left */
+    }
+    100% {
+        transform: translateX(0); /* Move back right */
+    }
 }
 .get-in-touch-section{
     margin-top: 8rem;
@@ -402,7 +410,7 @@ body {
 .get-in-touch {
     margin-left: 10rem;
     height: 4.5rem;
-    padding: 0.8rem 2rem;
+    padding: 1rem 2rem;
     border: none;
     font-weight: 500;
     background-color: rgb(255, 255, 255);
@@ -416,12 +424,12 @@ body {
 }
 
 .available-text {
-    font-size: 2.5rem;
-    font-weight: bold;
+    font-size: 2.3rem;
     color: rgb(255, 255, 255);
 }
 
 .bi-circle-fill {
+    font-size: 1rem;
     color: rgb(255, 255, 255);
 }
 
@@ -441,11 +449,12 @@ body {
     color: #fff;
     font-size: 2rem;
     margin-bottom: 2.5rem;
+    text-decoration: none;
 }
 
 .social-text {
     margin-right: 10rem;
-    color: #fff;
+    color: #C9C9C9;
     font-size: 2.4rem;
     max-width: 40rem;
     text-align: right;
