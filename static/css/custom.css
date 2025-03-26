@@ -16,7 +16,6 @@ body {
 
 .nav-link {
     font-weight: 500;
-    font-size: 1.8rem; /* 18px */
     line-height: 1;
     letter-spacing: -0.011rem; /* -1.1% of font size */
     color: rgb(143, 143, 143);
@@ -104,18 +103,23 @@ body {
 }
 
 .custom-heading {
-    font-size: clamp(4rem, 8vw, 17rem);
-    font-weight: 500;
-    line-height: 1.2; /* Tight line spacing */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-    word-spacing: -0.05em; /* Optional: tighten word spacing */
+    font-size: clamp(3rem, 7vw + 1rem, 15rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    word-spacing: -0.03em;
+    
+    /* Additional stabilization */
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
 }
 
 /* Circle button - desktop */
 .circle-button {
-    width: clamp(100px, 15vw, 215px);
-    height: clamp(100px, 15vw, 215px);
+    width: clamp(100px, 15vw, 181px);
+    height: clamp(100px, 15vw, 181px);
     min-width: 100px;
     border-radius: 50%;
     background-color: #EEEEEE;
@@ -137,13 +141,32 @@ body {
 .circle-button:hover .circle-button-image {
     transform: scale(1.1);
 }
+.portfolio-email {
+    margin-top: 2.5rem !important; /* Adjust top margin */
+}
 
-.custom-paragraph p {
+.responsive-text-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.right-justified-text {
+    margin-left: auto; /* Pushes container to right */
+    width: 47%; /* Controls text block width */
+    max-width: 800px;
+    transition: all 0.3s ease;
+    text-indent: 25rem;
+}
+
+.right-justified-text p {
     text-align: justify;
-    word-spacing: -0.1em;      /* Tightens word spacing slightly */
-    letter-spacing: 0.02em;    /* Small character adjustment */
-    hyphens: auto;             /* Allows word breaking with hyphens */
-    text-indent: 20rem;
+    text-align-last: left; /* Last line aligns right */
+    word-spacing: -0.05em;
+    letter-spacing: 0.01em;
+    hyphens: auto;
+    font-size: clamp(1.8rem, 2.5vw, 3rem);
+    line-height: 1.4;
 }
 
 .division-line {
