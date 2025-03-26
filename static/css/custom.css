@@ -576,13 +576,17 @@ body {
     opacity: 1;
 }
 
+/* Update the work-image-caption styles */
 .work-image-caption {
     font-size: 2.5rem;
     margin-top: 10px;
     text-align: left;
     position: relative;
+    color: black; /* Force text color to black */
+    display: inline-block; /* Makes underline only as wide as text */
 }
 
+/* Update the underline animation */
 .work-image-caption::after {
     content: "";
     position: absolute;
@@ -594,22 +598,24 @@ body {
     transition: width 0.5s ease-in-out;
 }
 
+/* No changes needed to this part - it works correctly */
 .work-image-container:hover .work-image-caption::after {
     width: 100%;
 }
 
+/* Update the view case study text */
 .view-work-case-study {
     font-size: 1.5rem;
-    color: #a6a6a6;
+    color: black; /* Changed from #a6a6a6 to black */
     margin-top: -3px;
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
 .work-image-container:hover .view-work-case-study {
-    opacity: 1;
-    transform: translateY(0);
+    animation: fadeOut 0.5s ease-in-out 1s forwards;
 }
+
 .work-image {
     gap: 2.5rem; /* Adjust this value as needed */
 }
