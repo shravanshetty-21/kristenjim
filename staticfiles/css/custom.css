@@ -4,22 +4,25 @@ body {
 /* Existing CSS (unchanged) */
 /* Existing CSS (unchanged) */
 .navbar-custom {
-    width: auto; 
-    height: auto; 
-    max-width: 600px;
-    border-radius: 4rem; /* 66px converted */
-    padding: 1.5rem 2.5rem; /* 23px top/bottom, 40px left/right */
-    background-color: rgb(0, 0, 0); /* Light background */
-    color: rgb(255, 255, 255);   
+    width: 454px;
+    border-radius: 4rem;
+    padding: 0.75rem 2rem; /* Reduced vertical padding */
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-align: center;
+    display: inline-flex; /* Better height control */
+    align-items: center;
+    min-height: 4rem; /* Base height */
 }
 
 .nav-link {
-    font-weight: 500;
-    font-size: 1.8rem; /* 18px */
     line-height: 1;
-    letter-spacing: -0.011rem; /* -1.1% of font size */
-    color: rgb(143, 143, 143);
+    letter-spacing: -0.004rem; /* -1.1% of font size */
+    color: #C9C9C9;
+}
+
+.nav-item{
+    margin-right: 22px;    
 }
 
 .nav-link:hover {
@@ -36,6 +39,7 @@ body {
 }
 
 .nav-link.active {
+    font-weight: 500;
     color: white !important;
 }
 
@@ -82,11 +86,11 @@ body {
     }
 }
 /* Existing CSS (unchanged) */
+/* Existing CSS (unchanged) */
 .page-container {
-    margin-top: 140%;
-    margin-left: 10%;
-    margin-right: 10%;
-    overflow: hidden;
+    margin-top: 6rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
 /* Main container */
@@ -104,18 +108,23 @@ body {
 }
 
 .custom-heading {
-    font-size: clamp(4rem, 8vw, 17rem);
-    font-weight: 500;
-    line-height: 1.2; /* Tight line spacing */
-    margin: 0; /* Remove default margins */
-    padding: 0; /* Remove default padding */
-    word-spacing: -0.05em; /* Optional: tighten word spacing */
+    font-size: 122px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+    word-spacing: -0.03em;
+    
+    /* Additional stabilization */
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
 }
 
 /* Circle button - desktop */
 .circle-button {
-    width: clamp(100px, 15vw, 215px);
-    height: clamp(100px, 15vw, 215px);
+    width: clamp(100px, 15vw, 181px);
+    height: clamp(100px, 15vw, 181px);
     min-width: 100px;
     border-radius: 50%;
     background-color: #EEEEEE;
@@ -137,13 +146,36 @@ body {
 .circle-button:hover .circle-button-image {
     transform: scale(1.1);
 }
+.portfolio-email {
+    margin-top: 3.5rem !important; /* Adjust top margin */
+    font-weight: 500;
+}
 
-.custom-paragraph p {
+.responsive-text-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-top: 5.5rem;
+    font-size: 4.5rem;
+}
+
+.right-justified-text {
+    margin-left: auto; /* Pushes container to right */
+    width: 49%; /* Controls text block width */
+    max-width: 800px;
+    transition: all 0.3s ease;
+    text-indent: 15rem;
+}
+
+.right-justified-text p {
     text-align: justify;
-    word-spacing: -0.1em;      /* Tightens word spacing slightly */
-    letter-spacing: 0.02em;    /* Small character adjustment */
-    hyphens: auto;             /* Allows word breaking with hyphens */
-    text-indent: 20rem;
+    text-align-last: left; /* Last line aligns right */
+    word-spacing: -0.05em;
+    letter-spacing: 0.01em;
+    hyphens: auto;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.3;
 }
 
 .division-line {
@@ -160,9 +192,9 @@ body {
 
 .btn-primary {
     background-color: #EEEEEE;
-    font-size: 1.8rem;
-    height: 4.9rem;
-    padding: 0.8rem 3rem;
+    font-size: 1.5rem;
+    height: 4.5rem;
+    padding: 0.8rem 2rem;
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
     font-weight: 500;
@@ -177,8 +209,8 @@ body {
 
 .home-separator {
     width: 100%;
-    height: 2px; /* Adjust thickness */
-    background-color: #E0E0E0; /* Adjust color */
+    height: 1px; /* Adjust thickness */
+    background-color: #E5E5E5; /* Adjust color */
     margin: 20px 0; /* Adjust spacing */
     margin-top: 10rem;
 }
@@ -236,8 +268,8 @@ body {
 
 /* About section */
 .about-side-heading {
-    font-size: 7.5rem;
-    font-weight: 600;
+    font-size: 72px;
+    font-weight: 500;
 }
 
 .about-image {
@@ -262,7 +294,6 @@ body {
     color: black !important;
 }
 .resume-description {
-    font-size: 2.5rem; /* Smaller font size for mobile */
     color: #3E3E3E
 }
 
@@ -382,29 +413,33 @@ body {
 .motion-footer-container {
     width: 100%;
     overflow: hidden;
+    position: relative;
+}
+
+.motion-footer-wrapper {
+    display: flex;
+    width: fit-content;
+    animation: scrollLeft 10s linear infinite;
 }
 
 .motion-footer {
-    font-size: 20rem;
+    font-size: 212px;
     white-space: nowrap;
-    display: inline-block;
-    animation: moveRightLeft 25s linear infinite;
-    padding-left: 100%; /* Start with text off-screen */
+    padding-right: 4rem; /* Space between text instances */
+    flex-shrink: 0;
 }
 
-@keyframes moveRightLeft {
+@keyframes scrollLeft {
     0% {
-        transform: translateX(0); /* Start off-screen right */
-    }
-    50% {
-        transform: translateX(-100%); /* Move left */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(0); /* Move back right */
+        transform: translateX(-50%); /* Move by half the wrapper width */
     }
 }
+
 .get-in-touch-section{
-    margin-top: 8rem;
+    margin-top: 7rem;
 }
 
 .get-in-touch {
@@ -424,7 +459,7 @@ body {
 }
 
 .available-text {
-    font-size: 2.3rem;
+    font-size: 1.6rem;
     color: rgb(255, 255, 255);
 }
 
@@ -436,12 +471,12 @@ body {
 .email-text {
     margin-right: 10rem;
     font-size: 2.5rem;
-    color: rgb(255, 255, 255);
+    color: #EEEEEE;
+    font-weight: 500;
 }
 
 .social-section {
-    margin-top: 10rem;
-    margin-bottom: 10rem;
+    margin-top: 9rem;
 }
 
 .social {
@@ -449,7 +484,26 @@ body {
     color: #fff;
     font-size: 2rem;
     margin-bottom: 2.5rem;
-    text-decoration: none;
+    text-decoration: none; /* Ensures no underline by default */
+    position: relative; /* Needed for the pseudo-element */
+    display: inline-block; /* Constrains underline to text width */
+    transition: all 0.3s ease; /* Smooth hover transition */
+}
+
+/* Animated underline effect */
+.social:hover {
+    color: #fff; /* Maintains white color on hover */
+}
+
+.social:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px; /* Adjust distance from text */
+    width: 100%;
+    height: 1px; /* Underline thickness */
+    background-color: #fff; /* White underline */
+    animation: underlineFade 0.3s ease-out;
 }
 
 .social-text {
@@ -526,15 +580,9 @@ body {
     }
 }
 
-/* Existing CSS (unchanged) */
-.page-container {
-    margin-top: 7rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
-}
 
 .work-heading {
-    font-size: 13rem;
+    font-size: 122px;
 }
 
 .work-image-wrapper {
@@ -554,7 +602,7 @@ body {
     margin-bottom: 20px; /* Add some initial margin to separate images */
 }
 
-.img-fluid:hover {
+.img-border:hover {
     /* Remove the transform and margin */
     border: 2px solid #EEEEEE; /* Thin black border - change color as needed */
     box-sizing: border-box; /* Ensures border doesn't affect dimensions */
@@ -587,7 +635,8 @@ body {
 
 /* Update the work-image-caption styles */
 .work-image-caption {
-    font-size: 2.5rem;
+    font-size: 24px;
+    font-weight: 500;
     margin-top: 10px;
     text-align: left;
     position: relative;
@@ -677,8 +726,8 @@ body {
 
 .work-separator {
     width: 100%;
-    height: 2px;
-    background-color: #E0E0E0;
+    height: 1px;
+    background-color: #E5E5E5;
     margin: 20px 0;
     margin-bottom: 7rem;
 }
@@ -752,8 +801,8 @@ body {
 }
 
 .square-image-frame {
-    width: 450px;
-    height: 440px;
+    width: 376px;
+    height: 376px;
     overflow: hidden;
     flex-shrink: 0;
     border: 1px solid #ddd;
@@ -768,12 +817,6 @@ body {
 
 .square-image-frame:hover .cropped-image {
     transform: scale(1.05);
-    animation-play-state: paused;
-}
-
-/* Pause animation on hover */
-.image-scroll-container:hover .image-scroll-track {
-    animation-play-state: paused;
 }
 
 /* Responsive adjustments */
@@ -792,14 +835,15 @@ body {
 }
 
 .experiecne-heading {
-    font-size: 12rem;
+    font-size: 72px;
+    font-weight: 500;
 }
 
 .experience-download-btn {
     background-color: black;
-    font-size: 2rem;
-    height: 5.5rem;
-    padding: 0.5rem 5rem;
+    font-size: 20px;
+    height: 4.7rem;
+    padding: 1rem 2rem;
     border: none;
     transition: background-color 0.3s ease, color 0.3s ease;
     color: #ffff;
@@ -815,7 +859,7 @@ body {
 .experience-section {
     display: flex;
     flex-direction: column;
-    margin-left: 80rem;
+    margin-left: 50rem;
     gap: 2rem;
     padding: 2rem;
 }

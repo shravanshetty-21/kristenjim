@@ -9,20 +9,20 @@
             <!-- Navbar content -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
-                    <li class="nav-item me-5">
-                        <a class="fs-3 nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" 
+                    <li class="nav-item">
+                        <a class="fs-4 nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}" 
                         href="{% url 'portfolio:home' %}">Home</a>
                     </li>
-                    <li class="nav-item me-5">
-                        <a class="fs-3 nav-link {% if request.resolver_match.url_name == 'work' %}active{% endif %}" 
+                    <li class="nav-item">
+                        <a class="fs-4 nav-link {% if request.resolver_match.url_name == 'work' %}active{% endif %}" 
                         href="{% url 'portfolio:work' %}">Work</a>
                     </li>
-                    <li class="nav-item me-5">
-                        <a class="fs-3 nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" 
+                    <li class="nav-item">
+                        <a class="fs-4 nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}" 
                         href="{% url 'portfolio:about' %}">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="fs-3 nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+                    <li class="">
+                        <a class="fs-4 nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
                         href="mailto:krisjimalb@gmail.com?subject=Let's%20work%20together&body=I%20would%20like%20to%20connect%20with%20you.">Contact</a>
                     </li>
                 </ul>
