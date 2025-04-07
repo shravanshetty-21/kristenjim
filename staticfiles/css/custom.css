@@ -12,7 +12,7 @@ body {
     text-align: center;
     display: inline-flex; /* Better height control */
     align-items: center;
-    min-height: 4rem; /* Base height */
+    min-height: 54px; /* Base height */
 }
 
 .nav-link {
@@ -89,8 +89,8 @@ body {
 /* Existing CSS (unchanged) */
 .page-container {
     margin-top: 6rem;
-    margin-left: 10rem;
-    margin-right: 10rem;
+    margin-left: 80px;
+    margin-right: 80px;
 }
 
 /* Main container */
@@ -116,6 +116,7 @@ body {
     margin: 0;
     padding: 0;
     word-spacing: -0.03em;
+    color: #000000;
     
     /* Additional stabilization */
     text-size-adjust: 100%;
@@ -190,6 +191,7 @@ body {
 .side-heading {
     font-size: 4.8rem;
     font-weight: 500;
+    color: #000;
 }
 
 .btn-primary {
@@ -272,6 +274,7 @@ body {
 .about-side-heading {
     font-size: 72px;
     font-weight: 500;
+    color: #000;
 }
 
 .about-image {
@@ -874,8 +877,8 @@ body {
 }
 
 .experience-image {
-    width: 150px;
-    height: auto;
+    width: 110px;
+    height: 110px;
 }
 
 .experience-text {
@@ -885,13 +888,18 @@ body {
 }
 
 .small-text {
-    font-size: 1.5rem;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .big-text {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 700;
+}
+
+.medium-text {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 /* Mobile Responsiveness */
