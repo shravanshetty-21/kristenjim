@@ -1,7 +1,7 @@
 body {
     font-family: 'Satoshi', sans-serif;
 }
-/* Existing CSS (unchanged) */
+
 /* Existing CSS (unchanged) */
 .navbar-custom {
     width: 454px;
@@ -13,6 +13,17 @@ body {
     display: inline-flex; /* Better height control */
     align-items: center;
     min-height: 54px; /* Base height */
+    position: relative;
+    transition: top 0.3s ease;
+}
+
+.navbar-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 20px;
+    z-index: 999;
 }
 
 .nav-link {
@@ -50,6 +61,25 @@ body {
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
+
+#mainNavbar {
+    transition: top 0.4s ease-in-out;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0); /* Only X for default */
+    z-index: 1000;
+}
+
+.navbar-hidden {
+    transform: translate(-50%, -100%); /* Keep X center, move Y */
+}
+
+.navbar-visible {
+    transform: translate(-50%, 0); /* Back to original */
+}
+
+
 
 /* Mobile Responsiveness */
 @media (max-width: 768px) {

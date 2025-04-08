@@ -45,31 +45,6 @@
             });
 
 
-
-        //Scroll
-            document.addEventListener('DOMContentLoaded', function() {
-                const navbar = document.getElementById('mainNavbar');
-                let lastScrollPosition = 0;
-                const scrollThreshold = 100; // Adjust sensitivity (px)
-                
-                window.addEventListener('scroll', function() {
-                    const currentScrollPosition = window.pageYOffset;
-                    
-                    // Scroll down behavior
-                    if (currentScrollPosition > lastScrollPosition && currentScrollPosition > scrollThreshold) {
-                        navbar.style.transform = 'translateY(-100%)';
-                        navbar.style.transition = 'transform 0.3s ease-out';
-                    } 
-                    // Scroll up behavior
-                    else if (currentScrollPosition < lastScrollPosition) {
-                        navbar.style.transform = 'translateY(0)';
-                        navbar.style.transition = 'transform 0.2s ease-out';
-                    }
-                    
-                    lastScrollPosition = currentScrollPosition;
-                });
-            });
-
             //Image auto scroll
             document.addEventListener('DOMContentLoaded', function() {
                 const track = document.querySelector('.image-scroll-track');
@@ -115,5 +90,23 @@
                 smoothScroll();
               </script>
 
+              <script>
+                let lastScrollTop = 0;
+                const navbar = document.getElementById("mainNavbar");
+            
+                window.addEventListener("scroll", function () {
+                    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            
+                    if (currentScroll > lastScrollTop) {
+                        // Scrolling down → move navbar up
+                        navbar.style.top = "-100px";  // hides it upward
+                    } else {
+                        // Scrolling up → bring navbar back down
+                        navbar.style.top = "20px";
+                    }
+            
+                    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+                });
+            </script>
     </body>
 </html>
