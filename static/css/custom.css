@@ -128,23 +128,17 @@ body {
     width: 100%;
 }
 
-/* Flex container for desktop layout */
 .custom-heading-container {
     display: flex;
-    flex-direction: row; /* Default: side-by-side */
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1890px;
     margin: 0 auto;
     padding-top: 1rem;
     gap: 2rem;
     position: relative;
     flex-wrap: wrap;
-}  
-
-.circle-button-wrapper {
-    position: relative;
-    z-index: 1;
 }
 
 .custom-heading {
@@ -155,19 +149,21 @@ body {
     padding: 0;
     word-spacing: -0.03em;
     color: #000000;
-    
-    /* Additional stabilization */
     text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -moz-text-size-adjust: 100%;
+    white-space: pre-line; /* Allow line breaks */
 }
 
-/* Circle button - desktop */
+.circle-button-wrapper {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .circle-button {
-    position: absolute;
-    top: 45px !important;
-    right: 0;
-    width: clamp(80px, 10vw, 150px); /* Slightly smaller */
+    width: clamp(80px, 10vw, 150px);
     height: clamp(80px, 10vw, 150px);
     border-radius: 50%;
     background-color: #EEEEEE;
@@ -176,8 +172,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: none;
-    margin: 0 auto;
 }
 
 .circle-button-image {
@@ -191,9 +185,10 @@ body {
 /* Responsive behavior */
 @media screen and (max-width: 992px) {
     .custom-heading-container {
-        flex-direction: column; /* Stack vertically */
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        text-align: center;
+        text-align: left;
     }
 
     .custom-heading {
@@ -202,9 +197,10 @@ body {
     }
 
     .circle-button {
-        margin-bottom: 1rem;
+        margin-bottom: 0;
     }
 }
+
 .portfolio-email {
     margin-top: 3.5rem !important; /* Adjust top margin */
     font-weight: 500;
