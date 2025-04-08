@@ -152,6 +152,11 @@ body {
 .portfolio-email {
     margin-top: 3.5rem !important; /* Adjust top margin */
     font-weight: 500;
+    color: #4A4A4A;
+}
+
+.portfolio-email:hover {
+    color: #000;
 }
 
 .responsive-text-container {
