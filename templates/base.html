@@ -93,10 +93,27 @@
              <script>
                 AOS.init({
                   once: false,          // animate every time in view
-                  duration: 1000,       // animation speed
+                  mirror: true,
+                  duration: 800,       // animation speed
                   easing: 'ease-in-out',
                   offset: 100,          // trigger point before element is in view
                 });
               </script>
+              <script>
+                const scrollTrack = document.getElementById('scrollTrack');
+                let scrollAmount = 0;
+              
+                function smoothScroll() {
+                  scrollAmount += 1.3;
+                  if (scrollAmount >= scrollTrack.scrollWidth / 2) {
+                    scrollAmount = 0;
+                  }
+                  scrollTrack.style.transform = `translateX(-${scrollAmount}px)`;
+                  requestAnimationFrame(smoothScroll);
+                }
+              
+                smoothScroll();
+              </script>
+
     </body>
 </html>

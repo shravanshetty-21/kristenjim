@@ -32,7 +32,7 @@
 </div>
 <div class="about-images-wrapper" id="imageGallery" data-aos="fade-up">
     <div class="image-scroll-container">
-        <div class="image-scroll-track">
+        <div class="image-scroll-track" id="scrollTrack">
             <!-- Original 6 images -->
             <div class="square-image-frame">
                 <img class="cropped-image" src="{% static 'images/jim1.jpg' %}" alt="Jim 1">
@@ -52,19 +52,30 @@
             <div class="square-image-frame">
                 <img class="cropped-image" src="{% static 'images/jim6.png' %}" alt="Jim 6">
             </div>
-            <!-- First 3 images duplicated (creates seamless loop) -->
+
+            <!-- Repeating the same 6 images for infinite scroll effect -->
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim1.jpg' %}" alt="Jim 1">
+                <img class="cropped-image" src="{% static 'images/jim1.jpg' %}" alt="Jim 1 Clone">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim2.png' %}" alt="Jim 2">
+                <img class="cropped-image" src="{% static 'images/jim2.png' %}" alt="Jim 2 Clone">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim3.png' %}" alt="Jim 3">
+                <img class="cropped-image" src="{% static 'images/jim3.png' %}" alt="Jim 3 Clone">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim4.png' %}" alt="Jim 4 Clone">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim5.png' %}" alt="Jim 5 Clone">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim6.png' %}" alt="Jim 6 Clone">
             </div>
         </div>
     </div>
 </div>
+
 <div class="page-container">
     <div class="work-separator"></div>  
     <span class="experiecne-heading text-black" data-aos="fade-up">Experience</span>
@@ -87,7 +98,7 @@
         <div class="experience-item">
             <img class="img-fluid experience-image" data-aos="fade-up" src="{% static 'images/experience_2.png' %}" alt="Description">
             <div class="experience-text mt-1 ms-5" data-aos="fade-up">
-                <p class="small-text mb-1 mt-3">2023 - present</p>
+                <p class="small-text mb-1 mt-3">August 2024 - April 2025</p>
                 <p class="big-text mb-1 mt-1">Aviapros</p>
                 <p class="medium-text mt-1">UX/UI Designer - Contract</p>
             </div>
@@ -114,7 +125,7 @@
         <div class="experience-item">
             <img class="img-fluid experience-image" data-aos="fade-up" src="{% static 'images/experience_5.png' %}" alt="Description">
             <div class="experience-text mt-1 ms-5" data-aos="fade-up">
-                <p class="small-text mb-1 mt-3">2019 - 2020t</p>
+                <p class="small-text mb-1 mt-3">2019 - 2020</p>
                 <p class="big-text mb-1 mt-1">Freelancer</p>
                 <p class="medium-text mt-1">User Interface Designer</p>
             </div>

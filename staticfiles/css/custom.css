@@ -100,14 +100,22 @@ body {
 
 /* Flex container for desktop layout */
 .custom-heading-container {
-    position: relative; /* Needed for absolute positioning */
     display: flex;
+    flex-direction: row; /* Default: side-by-side */
     justify-content: space-between;
-    align-items: flex-start; /* Align items to top */
+    align-items: flex-start;
     max-width: 1890px;
     margin: 0 auto;
-    padding-top: 1rem; /* Add space at top */
-}   
+    padding-top: 1rem;
+    gap: 2rem;
+    position: relative;
+    flex-wrap: wrap;
+}  
+
+.circle-button-wrapper {
+    position: relative;
+    z-index: 1;
+}
 
 .custom-heading {
     font-size: 122px;
@@ -138,7 +146,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translateY(-20%); /* Adjust vertical position */
+    transform: none;
+    margin: 0 auto;
 }
 
 .circle-button-image {
@@ -149,6 +158,23 @@ body {
     transition: transform 0.3s ease;
 }
 
+/* Responsive behavior */
+@media screen and (max-width: 992px) {
+    .custom-heading-container {
+        flex-direction: column; /* Stack vertically */
+        align-items: center;
+        text-align: center;
+    }
+
+    .custom-heading {
+        font-size: 48px;
+        padding: 1rem;
+    }
+
+    .circle-button {
+        margin-bottom: 1rem;
+    }
+}
 .portfolio-email {
     margin-top: 3.5rem !important; /* Adjust top margin */
     font-weight: 500;
@@ -166,7 +192,12 @@ body {
     margin-top: 5.5rem;
     font-size: 4.5rem;
 }
-
+.no-word-break {
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    white-space: normal !important;
+}
+  
 .right-justified-text {
     margin-left: auto; /* Pushes container to right */
     width: 49%; /* Controls text block width */
@@ -802,13 +833,9 @@ body {
     display: flex;
     gap: 1rem;
     width: max-content;
-    animation: scroll 40s linear infinite;
+    will-change: transform;
 }
 
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-450px * 6)); } /* Width of 6 images */
-}
 
 .square-image-frame {
     width: 376px;
@@ -895,6 +922,7 @@ body {
 .small-text {
     font-size: 16px;
     font-weight: 500;
+    color: #525252;
 }
 
 .big-text {
@@ -905,6 +933,7 @@ body {
 .medium-text {
     font-size: 20px;
     font-weight: 500;
+    color: #525252;
 }
 
 /* Mobile Responsiveness */
