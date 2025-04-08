@@ -118,7 +118,7 @@ body {
 /* Existing CSS (unchanged) */
 /* Existing CSS (unchanged) */
 .page-container {
-    margin-top: 6rem;
+    margin-top: -0.5rem;
     margin-left: 80px;
     margin-right: 80px;
 }
