@@ -80,50 +80,13 @@ body {
 }
 
 
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .navbar-custom {
-        width: 90%; /* Full width for mobile */
-        border-radius: 2rem; /* Smaller border radius for mobile */
-        padding: 1rem; /* Reduce padding for mobile */
-    }
-
-    .navbar-nav {
-        flex-direction: column; /* Stack nav items vertically */
-        gap: 0.5rem; /* Reduce gap between items */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    .nav-item {
-        width: 100%; /* Full width for each nav item */
-    }
-
-    .nav-link {
-        font-size: 1.5rem; /* Smaller font size for mobile */
-        padding: 0.5rem 0; /* Add padding for better touch targets */
-    }
-
-    .navbar-toggler {
-        margin-left: auto; /* Align toggler to the right */
-    }
-
-    .navbar-collapse {
-        background-color: rgb(0, 0, 0); /* Match navbar background */
-        border-radius: 1rem; /* Add border radius for collapsed menu */
-        padding: 1rem; /* Add padding for collapsed menu */
-        margin-top: 1rem; /* Add spacing between toggler and menu */
-    }
-}
-/* Existing CSS (unchanged) */
-/* Existing CSS (unchanged) */
+/* Main container */
 .page-container {
     margin-top: 6rem;
     margin-left: 80px;
     margin-right: 80px;
 }
 
-/* Main container */
 .header-container {
     width: 100%;
 }
@@ -181,25 +144,6 @@ body {
     max-height: 80%;
     object-fit: contain;
     transition: transform 0.3s ease;
-}
-
-/* Responsive behavior */
-@media screen and (max-width: 992px) {
-    .custom-heading-container {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        text-align: left;
-    }
-
-    .custom-heading {
-        font-size: 48px;
-        padding: 1rem;
-    }
-
-    .circle-button {
-        margin-bottom: 0;
-    }
 }
 
 .portfolio-email {
@@ -365,112 +309,6 @@ body {
     color: #3E3E3E
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .page-container {
-        margin-left: 5%;
-        margin-right: 5%;
-    }
-
-    .custom-heading-container {
-        display: flex;
-        justify-content: space-between; /* Push heading to the left and button to the right */
-        align-items: center; /* Align items vertically */
-        width: 100%; /* Ensure the container takes full width */
-        gap: 1rem; /* Add some spacing between heading and button */
-        padding: 0 5%; /* Add padding to align with the rest of the content */
-    }
-
-    .custom-heading {
-        font-size: 4rem; /* Smaller font size for mobile */
-        width: auto; /* Allow heading to take up required space */
-        text-align: left; /* Align heading to the left */
-        white-space: normal; /* Allow heading to wrap into multiple lines */
-        line-height: 1.2; /* Adjust line height for better readability */
-        max-width: 70%; /* Limit heading width to allow space for the button */
-    }
-
-    .circle-button {
-        width: 8rem; /* Smaller button size for mobile */
-        height: 7.5rem; /* Smaller button size for mobile */
-        margin-top: -12%; /* Remove top margin */
-    }
-
-    .portfolio-email {
-        font-size: 1.5rem; /* Smaller font size for mobile */
-        margin-top: 2.5rem !important; /* Adjust top margin */
-    }
-
-    .custom-paragraph {
-        font-size: 4rem;
-        line-height: 1.5;
-    }
-    
-    /* For Bootstrap users (these classes are already available) */
-    .text-end { 
-        text-align: right !important; 
-        font-size: 2.7rem;
-    }
-    .text-justify { text-align: justify !important; }
-    .text-start { text-align: left !important; }
-
-
-    .side-heading {
-        font-size: 2.5rem; /* Smaller font size for mobile */
-        text-align: left; /* Align heading to the left */
-        white-space: nowrap; /* Allow heading to wrap */
-        max-width: 70%; /* Limit heading width to allow space for the button */
-        margin: 0;
-    }
-
-    .btn-primary {
-        font-size: 1.2rem;
-        height: 3.5rem;
-        padding: 0.5rem 1.5rem;
-        margin-left: auto;
-        white-space: nowrap; /* Prevent button text from wrapping */
-        margin: 0;
-    }
-
-    .home-separator {
-        margin-top: 5rem;
-    }
-
-    .about-side-heading {
-        font-size: 4rem; /* Smaller font size for mobile */
-    }
-
-    .about-image {
-        width: 100%; /* Full width on mobile */
-        height: auto;
-    }
-
-    .resume-description {
-        font-size: 1.5rem; /* Smaller font size for mobile */
-    }
-
-    .download-btn {
-        font-size: 1.2rem;
-        height: 3.5rem;
-        padding: 0.5rem 1.5rem;
-    }
-
-    .portfolio-item {
-        margin-bottom: 2rem; /* Add spacing between stacked items */
-    }
-
-    .work-image-container {
-        width: 100%; /* Full width on mobile */
-        margin-bottom: 2rem; /* Add spacing between stacked items */
-    }
-
-    .work-image-caption, .view-work-case-study {
-        font-size: 1rem; /* Smaller font size for mobile */
-    }
-}
-
-
-
 /* Existing CSS (unchanged) */
 .footer {
     background-color: #000000;
@@ -581,71 +419,6 @@ body {
     max-width: 40rem;
     text-align: right;
     margin-left: 2rem;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .footer {
-        margin-top: 5rem; /* Reduce top margin for mobile */
-        padding: 2rem; /* Add padding for better spacing */
-    }
-
-    .motion-footer {
-        font-size: 6rem; /* Smaller font size for mobile */
-        margin-left: 2rem; /* Reduce left margin for mobile */
-        animation: moveLeft 10s linear infinite; /* Faster animation for mobile */
-    }
-
-    /* Adjust the "Get in touch" and "Available for work" section */
-    .d-flex.align-items-center.justify-content-between {
-        flex-direction: column; /* Stack elements vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    .d-flex.align-items-center {
-        margin-bottom: 1rem; /* Add spacing between button and email */
-    }
-
-    .get-in-touch {
-        margin-left: 0; /* Remove left margin for mobile */
-        font-size: 1.5rem; /* Smaller font size for mobile */
-        height: auto; /* Allow button height to adjust */
-        padding: 0.5rem 1.5rem; /* Adjust padding for mobile */
-        white-space: nowrap; /* Prevent text wrapping */
-    }
-
-    .available-text {
-        font-size: 1.2rem; /* Smaller font size for mobile */
-        margin-left: 1rem; /* Adjust spacing */
-    }
-
-    .email-text {
-        margin-right: 49%; /* Remove right margin for mobile */
-        font-size: 1.4rem; /* Smaller font size for mobile */
-        display: block; /* Move email to the next line */
-        margin-top: 1rem; /* Add spacing between button and email */
-    }
-
-    .social-section {
-        margin-top: 3rem; /* Reduce top margin for mobile */
-        flex-direction: column; /* Stack social links and text vertically */
-        align-items: flex-start; /* Align items to the left */
-    }
-
-    .social {
-        margin-left: 2rem; /* Reduce left margin for mobile */
-        font-size: 1.5rem; /* Smaller font size for mobile */
-        margin-bottom: 1.5rem; /* Reduce bottom margin for mobile */
-    }
-
-    .social-text {
-        margin-right: 2rem; /* Reduce right margin for mobile */
-        font-size: 1.5rem; /* Smaller font size for mobile */
-        max-width: 100%; /* Full width for mobile */
-        text-align: left; /* Align text to the left */
-        margin-left: 2rem; /* Add left margin for consistency */
-        margin-top: 2rem; /* Add top margin for spacing */
-    }
 }
 
 
@@ -800,49 +573,6 @@ body {
     margin-bottom: 7rem;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-    .page-container {
-        margin-left: 2rem; /* Reduce left margin for mobile */
-        margin-right: 2rem; /* Reduce right margin for mobile */
-    }
-
-    .work-heading {
-        font-size: 6rem; /* Smaller font size for mobile */
-    }
-
-    .work-image-wrapper {
-        flex-direction: column; /* Stack images vertically */
-        gap: 1rem; /* Reduce gap for mobile */
-    }
-
-    .work-image-container {
-        width: 100%; /* Full width for mobile */
-        margin-bottom: 2rem; /* Add spacing between stacked images */
-    }
-
-    .work-image-caption {
-        font-size: 1.8rem; /* Smaller font size for mobile */
-    }
-
-    .view-work-case-study {
-        font-size: 1.2rem; /* Smaller font size for mobile */
-    }
-
-    .work-separator {
-        margin-bottom: 3rem; /* Reduce bottom margin for mobile */
-    }
-    .hover-icon {
-        position: absolute; /* Position the icon within the image container */
-        bottom: 6rem; /* Adjust bottom position */
-        right: 2rem; /* Adjust right position */
-        font-size: 2.5rem; /* Adjust icon size */
-        color: black; /* Icon color */
-        opacity: 0; /* Initially hidden */
-        transition: opacity 0.3s ease-in-out; /* Smooth transition */
-        font-size: 5rem;
-    }
-}
 
 .about-images-wrapper {
     width: 100%;
@@ -881,21 +611,6 @@ body {
 
 .square-image-frame:hover .cropped-image {
     transform: scale(1.05);
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .square-image-frame {
-        width: 150px;
-        height: 150px;
-    }
-}
-
-@media (max-width: 576px) {
-    .square-image-frame {
-        width: 120px;
-        height: 120px;
-    }
 }
 
 .experiecne-heading {
@@ -963,11 +678,339 @@ body {
     color: #525252;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
+
+/* MOBILE VIEW ONLY */
+@media (max-width: 788px) {
     .page-container {
-        margin-left: 2rem; /* Reduce left margin for mobile */
-        margin-right: 2rem; /* Reduce right margin for mobile */
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+  .navbar-custom {
+    width: 100%;
+    border-radius: 0;
+    padding: 1rem;
+    background-color: transparent !important;
+    display: flex;
+    justify-content: flex-start; /* Puts the icon on the left */
+    position: relative;
+}
+
+/* Custom hamburger icon (bold) */
+.navbar-toggler {
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+.navbar-toggler-icon {
+    background-image: none;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after,
+.navbar-toggler-icon div {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: black;
+    left: 0;
+    transition: all 0.3s;
+}
+
+.navbar-toggler-icon::before {
+    top: 0;
+}
+
+.navbar-toggler-icon::after {
+    bottom: 0;
+}
+
+.navbar-toggler-icon div {
+    top: 50%;
+    transform: translateY(-50%);
+}   
+
+/* Dropdown menu with background */
+.navbar-collapse {
+    background-color: #000000 !important; /* Set your desired background */
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 16px;
+    width: 140px;
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    z-index: 1000;
+}
+
+.navbar-nav {
+    flex-direction: column;
+    width: 100%;
+    align-items: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    width: 100%;
+    text-align: right;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: rgb(255, 255, 255) !important;
+    text-align: right;
+}
+
+  .header-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    gap: 0; 
+  }
+
+  .circle-button-wrapper {
+    order: -1; /* Show image first */
+    margin-left: -5px; /* Start exactly at left */
+    padding-left: 0;
+    align-self: flex-start; /* Prevent centering */
+  }
+
+  .circle-button {
+    margin: 0;
+    padding: 0;
+    align-self: flex-start; /* Ensure button is not centered */
+  }
+
+  .custom-heading {
+    font-size: 50px !important;
+    margin-top: 2rem;
+    margin-left: -9px;
+    margin-right: 5px;
+    text-align: center;
+    align-self: center; /* Center the text below the image */
+    margin-top: -4rem !important;
+  }
+
+    .custom-heading-container {
+        display: flex;
+        justify-content: space-between; /* Push heading to the left and button to the right */
+        align-items: center; /* Align items vertically */
+        width: 100%; /* Ensure the container takes full width */
+        gap: 1rem; /* Add some spacing between heading and button */
+        padding: 0 5%; /* Add padding to align with the rest of the content */
+    }
+
+    .circle-button {
+        width: 8rem; /* Smaller button size for mobile */
+        height: 7.5rem; /* Smaller button size for mobile */
+        margin-top: -12%; /* Remove top margin */
+    }
+
+    .portfolio-email {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+        margin-top: 2.5rem !important; /* Adjust top margin */
+        margin-left: 11px;
+    }
+
+    .responsive-text-container{
+        width: 95%;
+        margin-left: 10px;
+        margin-right: 0px;
+    }
+
+    .right-justified-text{
+        width: 100%;
+        line-height: 1.5;
+        margin-right: 65px !important;
+        margin-left: 0px !important;
+        text-indent: 10rem;
+        word-spacing: 2px;
+    }
+
+    .right-justified-text p{
+        font-size: 24px !important;
+        line-height: 1.5;
+        box-sizing: border-box;
+        word-spacing: 4px;
+        letter-spacing: 0px;
+    }
+    .no-word-break {
+        word-break: keep-all !important;
+        overflow-wrap: break-word !important;
+        white-space: normal !important;
+    }
+    /* For Bootstrap users (these classes are already available) */
+    .text-end { 
+        text-align: right !important; 
+        font-size: 2.7rem;
+    }
+    .text-justify { text-align: justify !important; }
+    .text-start { text-align: left !important; }
+
+    .d-flex {
+    flex-wrap: nowrap; /* Prevents items from wrapping */
+}
+    
+    .side-heading {
+        font-size: 20px !important;
+        text-align: left !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        margin: 0 !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        /* Remove or adjust this line */
+        margin-left: 12px !important;
+    }
+
+    .btn-primary {
+        font-size: 1.2rem !important;
+        height: 42px !important;
+        padding: 0.5rem 1.5rem !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+        margin-right: 14px !important;
+        background-color: #000;
+        color: #fff !important;
+    }
+
+    .work-image{
+        margin-left: -4px;
+        margin-right: 8px;
+    }
+
+    .home-separator {
+        margin-top: 5rem;
+    }
+
+    .about-side-heading {
+        font-size: 4rem; /* Smaller font size for mobile */
+    }
+
+    .about-image {
+        width: 100%; /* Full width on mobile */
+        height: auto;
+    }
+
+    .resume-description {
+        font-size: 1.5rem; /* Smaller font size for mobile */
+    }
+
+    .download-btn {
+        font-size: 1.2rem;
+        height: 3.5rem;
+        padding: 0.5rem 1.5rem;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem; /* optional: spacing between icon and text */
+    }
+
+
+    .portfolio-item {
+        margin-bottom: 2rem; /* Add spacing between stacked items */
+    }
+
+    .work-image-container {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 2rem; /* Add spacing between stacked items */
+    }
+
+    .work-image-caption, .view-work-case-study {
+        font-size: 1rem; /* Smaller font size for mobile */
+    }
+
+    .work-heading {
+        font-size: 50px; /* Smaller font size for mobile */
+        margin-left: 11px;
+    }
+
+    .work-separator {
+        align-items: center;
+        width: 94%;
+        margin-bottom: 3rem; /* Reduce bottom margin for mobile */
+        margin-left: 12px;
+    }
+    .work-image-wrapper {
+        flex-direction: column; /* Stack images vertically */
+        gap: 1rem; /* Reduce gap for mobile */
+    }
+    .mobile-column {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+    .work-image{
+        margin-left: 12px;
+    }
+    
+
+    .work-image-container {
+        width: 98.6%; /* Full width for mobile */
+        margin-bottom: 2rem; /* Add spacing between stacked images */
+    }
+
+    .work-image-caption {
+        font-size: 1.8rem; /* Smaller font size for mobile */
+    }
+
+    .view-work-case-study {
+        font-size: 1.2rem; /* Smaller font size for mobile */
+    }
+
+    .hover-icon {
+        position: absolute; /* Position the icon within the image container */
+        bottom: 6rem; /* Adjust bottom position */
+        right: 2rem; /* Adjust right position */
+        font-size: 2.5rem; /* Adjust icon size */
+        color: black; /* Icon color */
+        opacity: 0; /* Initially hidden */
+        transition: opacity 0.3s ease-in-out; /* Smooth transition */
+        font-size: 5rem;
+    }
+
+    .mobile-show-more {
+        font-size: 1.2rem !important;
+        height: 42px !important;
+        padding: 0.5rem 1.5rem !important;
+        white-space: nowrap !important;
+        margin: 0 !important;
+        margin-right: -8px !important;
+        background-color: #000;
+        color: #fff !important;
+    }
+
+    .mobile-side-heading {
+        font-size: 20px !important;
+        text-align: left !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        margin: 0 !important;
+        flex: 1 !important;
+        min-width: 0 !important;
+        /* Remove or adjust this line */
+        margin-left: -9px !important;
+    }
+
+    .square-image-frame {
+        width: 140px;
+        height: 140px;
     }
 
     .about-images-wrapper {
@@ -976,36 +1019,62 @@ body {
         margin-top: 5rem; /* Reduce top margin for mobile */
     }
 
-    .about-image-container {
-        width: 48%; /* Two images per row on mobile */
-    }
-
+    
     .about-side-heading {
-        font-size: 4rem; /* Smaller font size for mobile */
+        font-size: 32px; /* Smaller font size for mobile */
+        margin-left: 11px;
+        margin-right: 8px;
     }
-
+    
+    .about-image-container {
+        width: 98% !important;
+        margin-left: 3px;
+        margin-right: 8px;
+    }
     .resume-description {
         font-size: 1.5rem; /* Smaller font size for mobile */
     }
+    
+    .experience-download-btn {
+        font-size: 1.2rem;
+        height: 3.5rem;
+        padding: 0.5rem 1.5rem;
 
-    .experiecne-heading {
-        font-size: 6rem; /* Smaller font size for mobile */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .download-button{
+        width: 395px;
+        height: 110px;
+        margin-left: 13px;
+        margin-right: 8px;
     }
 
     .experience-section {
-        margin-left: 2rem; /* Reduce left margin for mobile */
+        margin-left: 1px; /* Reduce left margin for mobile */
         padding: 1rem; /* Reduce padding for mobile */
     }
 
     .experience-item {
-        flex-direction: column; /* Stack image and text vertically */
-        align-items: flex-start; /* Align items to the left */
-        gap: 1rem; /* Reduce gap for mobile */
-    }
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start; /* Align text top with image */
+    gap: 1rem;
+}
 
-    .experience-image {
-        width: 100%; /* Full width for mobile */
-    }
+.experience-image {
+    width: 52px !important;
+    height: 52px;
+    flex-shrink: 0;
+}
+
+.experience-text {
+    margin-left: 4px !important;  /* Override .ms-5 */
+    margin-top: -17px !important;   /* Align with top of image */
+}
 
     .small-text {
         font-size: 1.2rem; /* Smaller font size for mobile */
@@ -1013,12 +1082,6 @@ body {
 
     .big-text {
         font-size: 1.5rem; /* Smaller font size for mobile */
-    }
-
-    .experience-download-btn {
-        font-size: 1.2rem; /* Smaller font size for mobile */
-        height: 3.5rem; /* Smaller button height for mobile */
-        padding: 0.5rem 1.5rem; /* Adjust padding for mobile */
     }
 
     /* Stack image and paragraph vertically on mobile */
@@ -1035,5 +1098,93 @@ body {
     .col-md-6 img {
         margin-bottom: 2rem; /* Add spacing between image and paragraph */
     }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .motion-footer,
+    .motion-footer-container,
+    .motion-footer-wrapper {
+        display: none !important;
+    }
+
+    /* Social section - should be first */
+    .social-section {
+        width: 95%;
+        order: 1;
+        flex-direction: column;
+        margin-left: 13px;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+
+    .social{
+        font-size: 20px !important;
+    }
+
+    /* Social links in a row */
+    .social-section .flex-column {
+        flex-direction: row !important;
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Social paragraph text */
+    .social-text {
+        font-size: 32px;
+        margin: 0;
+        margin-top: 1.5rem;
+    }
+    /* Social links */
+    .social {
+        font-size: 1.5rem;
+        margin: 0 !important;
+    }
+
+    
+
+    /* Get in touch section (wrapper div) */
+    .get-in-touch-section {
+        margin-top: 25px;
+        margin-left: -75px;
+        order: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    /* Available for work text */
+    .available-text {
+        width: 95%;
+        order: 1;
+        font-size: 1.2rem;
+        margin-left: 5px !important;
+        margin-top: 0.5rem;
+    }
+
+    /* Get in touch button */
+    .get-in-touch {
+        width: 95%;
+        order: 0;
+        margin-left: 0;
+        font-size: 1.5rem;
+        height: auto;
+        padding: 0.5rem 1.5rem;
+        white-space: nowrap;
+    }
+
+    /* Email */
+    .email-text {
+        width: 42%;
+        order: 2;
+        margin-top: 25px;
+        margin-left: 5px;
+        font-size: 1.4rem;
+        display: block;
+        margin-bottom: 25px;
+    }
+
 }
 
