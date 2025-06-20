@@ -23,17 +23,17 @@
     <div class="portfolio-email" data-aos="fade-up">
         <span class=" fs-2" onclick="copyEmail()">krisjimalb@gmail.com <i class="bi bi-copy"></i></span> 
     </div>
-        <div class="responsive-text-container">
-            <div class="right-justified-text" data-aos="fade-up">
-                <p class="no-word-break">
-                    Hello, I'm a Senior UI/UX Designer with 4+ years of experience, 
-                    based in Malta, solving problems through intuitive design. 
-                    Let's create!
-                </p>
-            </div>
+    <div class="responsive-text-container">
+        <div class="right-justified-text" data-aos="fade-up">
+            <p class="no-word-break">
+                Hello, I'm a Senior UI/UX Designer with 4+ years of experience, 
+                based in Malta, solving problems through intuitive design. 
+                Let's create!
+            </p>
         </div>
+    </div>
     <!-- Division L ine -->
-    <div class="home-separator"></div>
+    <div class="work-separator"></div>
     <div class="d-flex justify-content-between align-items-center w-100 mt-5" data-aos="fade-up">
         <div class="side-heading text-black">Work.</div>  
         <button class="btn btn-primary border-0 text-dark show-more" id="showMoreBtn" onclick="window.location.href='{% url 'portfolio:work' %}';">
@@ -42,7 +42,7 @@
     </div>
 
     <!-- Image Section -->
-    <div class="d-flex align-items-center work-image mt-5">
+    <div class="d-flex justify-content-between align-items-center work-image mt-5 mobile-column">
 
         <!-- ibet -->
         <div class="work-image-container" data-aos="fade-up">
@@ -64,7 +64,7 @@
         </div>
     </div>
 
-    <div class="d-flex align-items-center work-image mt-5">
+    <div class="d-flex justify-content-between align-items-center work-image mt-5 mobile-column">
         <!-- Kanon -->
         <div class="work-image-container" data-aos="fade-up">
             <a href="https://www.figma.com/proto/rG2hovLpMrUioudinZVhMM/Projects-portfolio?page-id=1%3A1217&node-id=1-1587&viewport=492%2C45%2C0.05&t=9t67SRU6pOP947tD-1&scaling=min-zoom&content-scaling=fixed" target="_blank" class="work-link">
@@ -84,10 +84,10 @@
                 <span class="view-work-case-study">View Case Study</span>
         </div>
     </div>
-    <div class="home-separator"></div>
+    <div class="work-separator"></div>
     <div class="d-flex justify-content-between align-items-center w-100 mt-5 custom-heading-container" data-aos="fade-up">
-        <div class="side-heading text-black">About.</div>  
-        <button class="btn btn-primary border-0 text-dark show-more" id="showaboutMoreBtn" onclick="window.location.href='{% url 'portfolio:about' %}';">
+        <div class="side-heading mobile-side-heading text-black">About.</div>  
+        <button class="btn btn-primary border-0 text-dark show-more mobile-show-more" id="showaboutMoreBtn" onclick="window.location.href='{% url 'portfolio:about' %}';">
             Show more
         </button>
     </div>
