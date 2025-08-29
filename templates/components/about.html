@@ -20,19 +20,16 @@
         <!-- Right Side: Button & Paragraph -->
         <div class="col-md-5 d-flex align-items-center text-start">
             <p class="resume-description fs-3">
-                Beyond design, I stay active in different ways, whether it’s leading my local running club, hitting the gym, or playing sports. 
-                Music is a big part of my life too, I play and teach guitar, which has taught me patience and creativity in a whole new way.
+                Beyond design, I try to keep life active and balanced. I love playing guitar, staying up to date with what’s happening in the tech world, and keeping myself moving through running, gym sessions, and volleyball. These little passions give me the energy and focus I bring back into my work.
                 <br><br>
-                Traveling keeps me inspired, exposing me to new cultures and perspectives that shape my ideas. I’m also an avid reader, always 
-                looking to learn and grow. I see every loss as a lesson and have a habit of spotting pain points in businesses, constantly 
-                thinking of ways to solve them.
+                I also love traveling and exploring new places. Meeting people from different cultures and hearing their stories gives me fresh perspectives and keeps me inspired, not just as a designer, but as a person.
             </p>
         </div>
     </div>
 </div>
 <div class="about-images-wrapper" id="imageGallery" data-aos="fade-up">
     <div class="image-scroll-container">
-        <div class="image-scroll-track" id="scrollTrack">
+        <div class="image-scroll-track scroll-track" id="scrollTrack">
             <!-- Original 6 images -->
             <div class="square-image-frame">
                 <img class="cropped-image" src="{% static 'images/jim1.jpg' %}" alt="Jim 1">
@@ -41,16 +38,19 @@
                 <img class="cropped-image" src="{% static 'images/jim2.jpg' %}" alt="Jim 2">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim3.jpg' %}" alt="Jim 3">
+                <img class="cropped-image" src="{% static 'images/jim7.png' %}" alt="Jim 3">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim4.jpg' %}" alt="Jim 4">
+                <img class="cropped-image" src="{% static 'images/jim3.jpg' %}" alt="Jim 4">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim5.jpg' %}" alt="Jim 5">
+                <img class="cropped-image" src="{% static 'images/jim4.jpg' %}" alt="Jim 5">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim6.jpg' %}" alt="Jim 6">
+                <img class="cropped-image" src="{% static 'images/jim5.jpg' %}" alt="Jim 6">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim6.jpg' %}" alt="Jim 7">
             </div>
 
             <!-- Repeating the same 6 images for infinite scroll effect -->
@@ -61,16 +61,19 @@
                 <img class="cropped-image" src="{% static 'images/jim2.jpg' %}" alt="Jim 2 Clone">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim3.jpg' %}" alt="Jim 3 Clone">
+                <img class="cropped-image" src="{% static 'images/jim7.png' %}" alt="Jim 3 Clone">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim4.jpg' %}" alt="Jim 4 Clone">
+                <img class="cropped-image" src="{% static 'images/jim3.jpg' %}" alt="Jim 4 Clone">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim5.jpg' %}" alt="Jim 5 Clone">
+                <img class="cropped-image" src="{% static 'images/jim4.jpg' %}" alt="Jim 5 Clone">
             </div>
             <div class="square-image-frame">
-                <img class="cropped-image" src="{% static 'images/jim6.jpg' %}" alt="Jim 6 Clone">
+                <img class="cropped-image" src="{% static 'images/jim5.jpg' %}" alt="Jim 6 Clone">
+            </div>
+            <div class="square-image-frame">
+                <img class="cropped-image" src="{% static 'images/jim6.jpg' %}" alt="Jim 7 Clone">
             </div>
         </div>
     </div>
@@ -80,16 +83,25 @@
     <div class="work-separator"></div>  
     <span class="about-side-heading text-black" data-aos="fade-up">Experience</span>
     <div class="download-button" data-aos="fade-up">
-        <a href="{% static 'images/Kristen_Resume.pdf' %}" download="Kristen_Resume.pdf" class="btn experience-download-btn mt-5">
-            <i class="bi bi-download me-2"></i> Download Resume
+        <a href="https://www.linkedin.com/in/kristen-jim/" class="btn experience-download-btn mt-5">
+            <i class="bi bi-linkedin me-2"></i> Go to Linkedin <i class="bi bi-arrow-up-short fs-2 rotate-right"></i>
         </a>
     </div>
 
     <div class="experience-section">
         <div class="experience-item">
+            <img class="img-fluid experience-image" data-aos="fade-up" src="{% static 'images/experience_6.png' %}" alt="Description">
+            <div class="experience-text mt-1 ms-5" data-aos="fade-up">
+                <p class="small-text mb-1 mt-3">Sept 2025 - Present</p>
+                <p class="big-text mb-1 mt-1">Betsson Group</p>
+                <p class="medium-text mt-1">Product Designer</p>
+            </div>
+        </div>
+
+        <div class="experience-item">
             <img class="img-fluid experience-image" data-aos="fade-up" src="{% static 'images/experience_1.png' %}" alt="Description">
             <div class="experience-text mt-1 ms-5" data-aos="fade-up">
-                <p class="small-text mb-1 mt-3">May 2023 - Present</p>
+                <p class="small-text mb-1 mt-3">May 2023 - Sept 2025</p>
                 <p class="big-text mb-1 mt-1">eCabs Technologies</p>
                 <p class="medium-text mt-1">Senior UX/UI Designer</p>
             </div>
@@ -131,7 +143,126 @@
             </div>
         </div>
     </div>
+    <div class="work-separator"></div>
+    <div class="mt-5 brands-side-heading text-black" data-aos="fade-up">Brands I’ve worked with</div> 
 </div>
+    <div class="image-scroll-container mt-5">
+        <div class="brands-scroll-track scroll-track" id="scrollTrack">
+            <!-- Original 6 images -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand1.png' %}" alt="Jim 1">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand2.png' %}" alt="Jim 2">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand3.png' %}" alt="Jim 3">
+            </div>
+            <div class="brands-image-frame-1">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand4&5.png' %}" alt="Jim 4&5">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand6.png' %}" alt="Jim 6">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand7.png' %}" alt="Jim 7">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand8.png' %}" alt="Jim 8">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand9.png' %}" alt="Jim 9">
+            </div>
+
+            <!-- Repeating the same 6 images for infinite scroll effect -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand1.png' %}" alt="Jim 1 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand2.png' %}" alt="Jim 2 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand3.png' %}" alt="Jim 3 Clone">
+            </div>
+            <div class="brands-image-frame-1">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand4&5.png' %}" alt="Jim 4&5 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand6.png' %}" alt="Jim 6 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand7.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand8.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand9.png' %}" alt="Jim 7 Clone">
+            </div>
+        </div>
+    </div>
+    <div class="image-scroll-container mt-5">
+        <div class="brands-scroll-track scroll-track" id="scrollTrack">
+            <!-- Original 6 images -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand1.png' %}" alt="Jim 1">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand2.png' %}" alt="Jim 2">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand3.png' %}" alt="Jim 3">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand4.png' %}" alt="Jim 4">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand5.png' %}" alt="Jim 5">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand6.png' %}" alt="Jim 6">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand7.png' %}" alt="Jim 7">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand8.png' %}" alt="Jim 8">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand9.png' %}" alt="Jim 9">
+            </div>
+
+            <!-- Repeating the same 6 images for infinite scroll effect -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand1.png' %}" alt="Jim 1 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand2.png' %}" alt="Jim 2 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand3.png' %}" alt="Jim 3 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand4.png' %}" alt="Jim 4 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand5.png' %}" alt="Jim 5 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand6.png' %}" alt="Jim 6 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand7.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand8.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand9.png' %}" alt="Jim 7 Clone">
+            </div>
+        </div>
+    </div>
+
 
 
 

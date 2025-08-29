@@ -1,5 +1,26 @@
 body {
     font-family: 'Satoshi', sans-serif;
+    cursor: none;
+}
+
+.cursor-circle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  transition: width 0.2s ease, height 0.2s ease;
+
+  /* Negative vision effect */
+  backdrop-filter: invert(1);
+  -webkit-backdrop-filter: invert(1);
+
+  border: 0px solid #fff; /* optional border */
+  background-color: transparent;
 }
 
 /* Existing CSS (unchanged) */
@@ -146,7 +167,17 @@ body {
     transition: transform 0.3s ease;
 }
 
+.portfolio-designation {
+    margin-top: 3.5rem !important; /* Adjust top margin */
+}
+
 .portfolio-email {
+    margin-top: 3.5rem !important; /* Adjust top margin */
+    font-weight: 500;
+    color: black;
+}
+
+.portfolio-email-1 {
     margin-top: 3.5rem !important; /* Adjust top margin */
     font-weight: 500;
     color: #4A4A4A;
@@ -289,6 +320,13 @@ body {
     height: 100%;
 }
 
+.brands-side-heading {
+    margin-top: 50px;
+    font-size: 72px;
+    font-weight: 500;
+    color: #000;
+}
+
 .download-btn {
     background-color: black;
     color: white;
@@ -313,7 +351,14 @@ body {
 .footer {
     background-color: #000000;
     margin-top: 10rem;
+    position: relative;
     overflow: hidden;
+}
+
+.footer-inner {
+  transform: scaleY(0);
+  transform-origin: center;   /* expand from middle */
+  transition: transform 0.1s linear;
 }
 
 .motion-footer-container {
@@ -334,6 +379,7 @@ body {
     padding-right: 4rem; /* Space between text instances */
     flex-shrink: 0;
 }
+
 
 @keyframes scrollLeft {
     0% {
@@ -369,20 +415,48 @@ body {
     color: rgb(255, 255, 255);
 }
 
-.bi-circle-fill {
-    font-size: 1rem;
-    color: rgb(255, 255, 255);
+@keyframes pulse {
+  0%   { box-shadow: 0 0 0 0 rgba(255,255,255,2); }
+  70%  { box-shadow: 0 0 0 0.9rem rgba(255,255,255,0); } /* use rem instead of px for scaling */
+  100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
 }
+
+/* target the icon's bounding box and force it to be square */
+.bi-circle-fill {
+  display: inline-flex;           /* allow width/height and center contents */
+  width: 1rem;                    /* square */
+  height: 1rem;                   /* same as width */
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;             /* tune so the glyph fits inside the square */
+  line-height: 1;
+  padding: 0;
+  margin: 0;                       /* margins from ms-5 etc can remain on element itself */
+  color: #fff;
+  border-radius: 50%;             /* now this will be a true circle */
+  animation: pulse 2s infinite;
+  -webkit-font-smoothing: antialiased;
+}
+
 
 .email-text {
     margin-right: 10rem;
     font-size: 2.5rem;
-    color: #EEEEEE;
+    color: #ffff;
     font-weight: 500;
 }
 
+.email-text:hover {
+  color: #C9C9C9; /* darker on hover */
+}
+
 .social-section {
+    color: #fff;
     margin-top: 9rem;
+}
+
+.social-section:hover {
+    color: #C9C9C9; /* Maintains white color on hover */
 }
 
 .social {
@@ -398,7 +472,7 @@ body {
 
 /* Animated underline effect */
 .social:hover {
-    color: #fff; /* Maintains white color on hover */
+    color: #C9C9C9; /* Maintains white color on hover */
 }
 
 .social:hover::after {
@@ -521,7 +595,7 @@ body {
 
 /* Or if you need to target Bootstrap spacing */
 .work-image > .work-image-container {
-    margin-right: -1rem; /* Negative margin to reduce space */
+    margin-right: 0rem; /* Negative margin to reduce space */
 }
 
 @keyframes fade-in-out {
@@ -569,7 +643,7 @@ body {
     width: 100%;
     height: 1px;
     background-color: #E5E5E5;
-    margin: 20px 0;
+    margin: 40px 0;
     margin-bottom: 7rem;
 }
 
@@ -613,26 +687,70 @@ body {
     transform: scale(1.05);
 }
 
+.brands-scroll-track {
+    margin-top: 30px;
+    display: flex;
+    gap: 10rem;
+    will-change: transform;
+}
+
+.brands-image-frame {
+    width: 173.5px;
+    height: 56.19px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.brands-image-frame-1 {
+    width: 347px;
+    height: 56.19px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.brands-cropped-image {
+    width: 80%;
+    height: 80%;
+    /* object-fit: cover; */
+    transition: transform 0.3s ease;
+}
+
+.brands-image-frame:hover .cropped-image {
+    transform: scale(1.05);
+}
+
 .experiecne-heading {
     font-size: 72px;
     font-weight: 500;
 }
 
+.rotate-right {
+    display: inline-block;
+    transform: rotate(45deg);
+  }
+
 .experience-download-btn {
-    background-color: black;
+    background-color: #EEEEEE;
     font-size: 20px;
-    height: 4.7rem;
-    padding: 1rem 2rem;
+    width: 273px;                /* fixed width */
+    height: 60px;                /* fixed height */
+    padding: 0 1rem;             /* only horizontal padding, since height is fixed */
     border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    color: #ffff;
+    color: black;
     border-radius: 0;
     font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
+
+
 .experience-download-btn:hover {
-    background-color: #EEEEEE;
-    color: black !important;
+    background-color: black;
+    color: #ffff !important;
 }
 
 .experience-section {

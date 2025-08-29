@@ -20,13 +20,13 @@
         </div>
     </div>
     
-    <div class="portfolio-email" data-aos="fade-up">
-        <span class=" fs-2" onclick="copyEmail()">krisjimalb@gmail.com <i class="bi bi-copy"></i></span> 
+    <div class="portfolio-designation" data-aos="fade-up">
+        <span class="portfolio-email fs-2">Product Designer</span> <span class="portfolio-email-1 fs-2">@Betsson group </span> 
     </div>
     <div class="responsive-text-container">
         <div class="right-justified-text" data-aos="fade-up">
             <p class="no-word-break">
-                Hello, I'm a Senior UI/UX Designer with 4+ years of experience, 
+                Hello, I'm a Product Designer with 4+ years of experience, 
                 based in Malta, solving problems through intuitive design. 
                 Let's create!
             </p>
@@ -117,18 +117,133 @@
 
             <!-- Right Side: Button & Paragraph -->
             <div class="col-md-5 text-start">
-                <a href="{% static 'images/Kristen_Resume.pdf' %}" download class="btn download-btn mt-5" data-aos="fade-up">
+                {% comment %} <a href="{% static 'images/Kristen_Resume.pdf' %}" download class="btn download-btn mt-5" data-aos="fade-up">
                     <i class="bi bi-download me-2"></i> Download Resume
-                </a>                
+                </a>                 {% endcomment %}
                 <p class="resume-description mt-5 fs-3" data-aos="fade-up">
-                    Beyond design, I stay active in different ways, whether it’s leading my local running club, hitting the gym, or playing sports. 
-                    Music is a big part of my life too, I play and teach guitar, which has taught me patience and creativity in a whole new way.
+                    Beyond design, I try to keep life active and balanced. I love playing guitar, staying up to date with what’s happening in the tech world, and keeping myself moving through running, gym sessions, and volleyball. These little passions give me the energy and focus I bring back into my work.
                     <br><br>
-                    Traveling keeps me inspired, exposing me to new cultures and perspectives that shape my ideas. I’m also an avid reader, always 
-                    looking to learn and grow. I see every loss as a lesson and have a habit of spotting pain points in businesses, constantly 
-                    thinking of ways to solve them.
+                    I also love traveling and exploring new places. Meeting people from different cultures and hearing their stories gives me fresh perspectives and keeps me inspired, not just as a designer, but as a person.
                 </p>
             </div>
-    </div>  
-</div>
+    </div> 
+    <div class="brands-side-heading text-black" data-aos="fade-up">Brands I’ve worked with</div> 
+    </div>
+    <div class="image-scroll-container mt-5">
+        <div class="brands-scroll-track scroll-track" id="scrollTrack">
+            <!-- Original 6 images -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand1.png' %}" alt="Jim 1">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand2.png' %}" alt="Jim 2">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand3.png' %}" alt="Jim 3">
+            </div>
+            <div class="brands-image-frame-1">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand4&5.png' %}" alt="Jim 4&5">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand6.png' %}" alt="Jim 6">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand7.png' %}" alt="Jim 7">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand8.png' %}" alt="Jim 8">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand9.png' %}" alt="Jim 9">
+            </div>
+
+            <!-- Repeating the same 6 images for infinite scroll effect -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand1.png' %}" alt="Jim 1 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand2.png' %}" alt="Jim 2 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand3.png' %}" alt="Jim 3 Clone">
+            </div>
+            <div class="brands-image-frame-1">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand4&5.png' %}" alt="Jim 4&5 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand6.png' %}" alt="Jim 6 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand7.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand8.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line1_brand9.png' %}" alt="Jim 7 Clone">
+            </div>
+        </div>
+    </div>
+    <div class="image-scroll-container mt-5">
+        <div class="brands-scroll-track scroll-track" id="scrollTrack">
+            <!-- Original 6 images -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand1.png' %}" alt="Jim 1">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand2.png' %}" alt="Jim 2">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand3.png' %}" alt="Jim 3">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand4.png' %}" alt="Jim 4">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand5.png' %}" alt="Jim 5">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand6.png' %}" alt="Jim 6">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand7.png' %}" alt="Jim 7">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand8.png' %}" alt="Jim 8">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand9.png' %}" alt="Jim 9">
+            </div>
+
+            <!-- Repeating the same 6 images for infinite scroll effect -->
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand1.png' %}" alt="Jim 1 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand2.png' %}" alt="Jim 2 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand3.png' %}" alt="Jim 3 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand4.png' %}" alt="Jim 4 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand5.png' %}" alt="Jim 5 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand6.png' %}" alt="Jim 6 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand7.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand8.png' %}" alt="Jim 7 Clone">
+            </div>
+            <div class="brands-image-frame">
+                <img class="brands-cropped-image" src="{% static 'images/Line2_brand9.png' %}" alt="Jim 7 Clone">
+            </div>
+        </div>
+    </div>
+
 {% endblock %}  

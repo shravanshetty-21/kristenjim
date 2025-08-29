@@ -19,6 +19,7 @@
         </script>
     </head>
     <body>
+        <div class="cursor-circle"></div>
         <header>
             {% include "topbar.html" %}
         </header>
@@ -32,6 +33,42 @@
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <script>
+
+           const cursor = document.querySelector(".cursor-circle");
+let mouseX = 0, mouseY = 0;
+let currentX = 0, currentY = 0;
+
+// Track mouse
+document.addEventListener("mousemove", (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+// Smooth follow
+function animate() {
+  currentX += (mouseX - currentX) * 0.15;
+  currentY += (mouseY - currentY) * 0.15;
+  cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+  requestAnimationFrame(animate);
+}
+animate();
+
+// Expand on hover
+document.querySelectorAll("a, button, img").forEach(el => {
+  el.addEventListener("mouseenter", () => {
+    cursor.style.width = "80px";
+    cursor.style.height = "80px";  // also increase height
+  });
+  el.addEventListener("mouseleave", () => {
+    cursor.style.width = "40px";
+    cursor.style.height = "40px";  // reset height
+  });
+});
+
+
+
+
+
         //copy email
             function copyEmail() {
                 const email = "krisjimalb@gmail.com";
@@ -81,21 +118,24 @@
                   offset: 100,          // trigger point before element is in view
                 });
               </script>
-              <script>
-                const scrollTrack = document.getElementById('scrollTrack');
+            <script>
+                function smoothScroll(el) {
                 let scrollAmount = 0;
-              
-                function smoothScroll() {
-                  scrollAmount += 1.3;
-                  if (scrollAmount >= scrollTrack.scrollWidth / 2) {
+
+                function step() {
+                    scrollAmount += 1.3;
+                    if (scrollAmount >= el.scrollWidth / 2) {
                     scrollAmount = 0;
-                  }
-                  scrollTrack.style.transform = `translateX(-${scrollAmount}px)`;
-                  requestAnimationFrame(smoothScroll);
+                    }
+                    el.style.transform = `translateX(-${scrollAmount}px)`;
+                    requestAnimationFrame(step);
                 }
-              
-                smoothScroll();
-              </script>
+
+                step();
+                }
+
+                document.querySelectorAll('.scroll-track').forEach(el => smoothScroll(el));
+            </script>
 
               <script>
                 let lastScrollTop = 0;
@@ -115,5 +155,26 @@
                     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
                 });
             </script>
+
+            <script>
+document.addEventListener("scroll", () => {
+  const footer = document.querySelector(".footer");
+  const inner = document.querySelector(".footer-inner");
+
+  if (!footer || !inner) return;
+
+  const footerTop = footer.offsetTop;
+  const windowHeight = window.innerHeight;
+  const scrollY = window.scrollY + windowHeight;
+
+  // 0 when footer just enters, 1 when fully in view
+  let progress = (scrollY - footerTop) / footer.offsetHeight;
+  progress = Math.min(Math.max(progress, 0), 1);
+
+  inner.style.transform = `scaleY(${progress})`;
+});
+</script>
+
+
     </body>
 </html>
