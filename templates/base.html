@@ -159,20 +159,25 @@ document.querySelectorAll("a, button, img").forEach(el => {
             <script>
 document.addEventListener("scroll", () => {
   const footer = document.querySelector(".footer");
-  const inner = document.querySelector(".footer-inner");
+  const topScreen = document.querySelector(".footer-screen.top");
+  const bottomScreen = document.querySelector(".footer-screen.bottom");
 
-  if (!footer || !inner) return;
+  if (!footer || !topScreen || !bottomScreen) return;
 
   const footerTop = footer.offsetTop;
+  const footerHeight = footer.offsetHeight;
   const windowHeight = window.innerHeight;
-  const scrollY = window.scrollY + windowHeight;
+  const scrollY = window.scrollY;
 
-  // 0 when footer just enters, 1 when fully in view
-  let progress = (scrollY - footerTop) / footer.offsetHeight;
+  // progress: 0 (footer just entered), 1 (footer fully visible)
+  let progress = (scrollY + windowHeight - footerTop) / footerHeight;
   progress = Math.min(Math.max(progress, 0), 1);
 
-  inner.style.transform = `scaleY(${progress})`;
+  // move away from center
+  topScreen.style.transform = `translateY(${-progress * 100}%)`;
+  bottomScreen.style.transform = `translateY(${progress * 100}%)`;
 });
+
 </script>
 
 
