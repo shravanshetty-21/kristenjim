@@ -740,7 +740,7 @@ body {
 }
 
 .brands-cropped-image {
-    width: 80%;
+    width: 76%;
     height: 80%;
     /* object-fit: cover; */
     transition: transform 0.3s ease;
