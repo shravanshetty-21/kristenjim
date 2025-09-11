@@ -35,35 +35,36 @@
         <script>
 
            const cursor = document.querySelector(".cursor-circle");
-let mouseX = 0, mouseY = 0;
-let currentX = 0, currentY = 0;
+                let mouseX = 0, mouseY = 0;
+                let currentX = 0, currentY = 0;
 
-// Track mouse
-document.addEventListener("mousemove", (e) => {
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-});
+                // Track mouse
+                document.addEventListener("mousemove", (e) => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    cursor.style.opacity = 1;
+                });
 
-// Smooth follow
-function animate() {
-  currentX += (mouseX - currentX) * 0.15;
-  currentY += (mouseY - currentY) * 0.15;
-  cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
-  requestAnimationFrame(animate);
-}
-animate();
+        // Smooth follow
+            function animate() {
+            currentX += (mouseX - currentX) * 0.15;
+            currentY += (mouseY - currentY) * 0.15;
+            cursor.style.transform = `translate(${currentX}px, ${currentY}px) translate(-50%, -50%)`;
+            requestAnimationFrame(animate);
+            }
+            animate();
 
-// Expand on hover
-document.querySelectorAll("a, button, img").forEach(el => {
-  el.addEventListener("mouseenter", () => {
-    cursor.style.width = "80px";
-    cursor.style.height = "80px";  // also increase height
-  });
-  el.addEventListener("mouseleave", () => {
-    cursor.style.width = "40px";
-    cursor.style.height = "40px";  // reset height
-  });
-});
+        // Expand on hover
+            document.querySelectorAll("a, button, img").forEach(el => {
+            el.addEventListener("mouseenter", () => {
+                cursor.style.width = "80px";
+                cursor.style.height = "80px";  // also increase height
+            });
+            el.addEventListener("mouseleave", () => {
+                cursor.style.width = "40px";
+                cursor.style.height = "40px";  // reset height
+            });
+            });
 
 
 
@@ -89,7 +90,7 @@ document.querySelectorAll("a, button, img").forEach(el => {
             });
 
 
-            //Image auto scroll
+        //Image auto scroll
             document.addEventListener('DOMContentLoaded', function() {
                 const track = document.querySelector('.image-scroll-track');
                 
@@ -102,14 +103,12 @@ document.querySelectorAll("a, button, img").forEach(el => {
                     }, 0);
                 });
             });
-
-            //image annimation
             
 
-            // Page annimation
-             </script>
-             <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-             <script>
+        // Page annimation
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
                 AOS.init({
                   once: false,          // animate every time in view
                   mirror: true,
@@ -117,8 +116,9 @@ document.querySelectorAll("a, button, img").forEach(el => {
                   easing: 'ease-in-out',
                   offset: 100,          // trigger point before element is in view
                 });
-              </script>
-            <script>
+        </script>
+
+        <script>
                 function smoothScroll(el) {
                 let scrollAmount = 0;
 
@@ -135,9 +135,9 @@ document.querySelectorAll("a, button, img").forEach(el => {
                 }
 
                 document.querySelectorAll('.scroll-track').forEach(el => smoothScroll(el));
-            </script>
+        </script>
 
-              <script>
+        <script>
                 let lastScrollTop = 0;
                 const navbar = document.getElementById("mainNavbar");
             
@@ -154,32 +154,30 @@ document.querySelectorAll("a, button, img").forEach(el => {
             
                     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
                 });
-            </script>
+        </script>
 
-            <script>
-document.addEventListener("scroll", () => {
-  const footer = document.querySelector(".footer");
-  const topScreen = document.querySelector(".footer-screen.top");
-  const bottomScreen = document.querySelector(".footer-screen.bottom");
+        <script>
+                document.addEventListener("scroll", () => {
+                const footer = document.querySelector(".footer");
+                const topScreen = document.querySelector(".footer-screen.top");
+                const bottomScreen = document.querySelector(".footer-screen.bottom");
 
-  if (!footer || !topScreen || !bottomScreen) return;
+                if (!footer || !topScreen || !bottomScreen) return;
 
-  const footerTop = footer.offsetTop;
-  const footerHeight = footer.offsetHeight;
-  const windowHeight = window.innerHeight;
-  const scrollY = window.scrollY;
+                const footerTop = footer.offsetTop;
+                const footerHeight = footer.offsetHeight;
+                const windowHeight = window.innerHeight;
+                const scrollY = window.scrollY;
 
-  // progress: 0 (footer just entered), 1 (footer fully visible)
-  let progress = (scrollY + windowHeight - footerTop) / footerHeight;
-  progress = Math.min(Math.max(progress, 0), 1);
+                // progress: 0 (footer just entered), 1 (footer fully visible)
+                let progress = (scrollY + windowHeight - footerTop) / footerHeight;
+                progress = Math.min(Math.max(progress, 0), 1);
 
-  // move away from center
-  topScreen.style.transform = `translateY(${-progress * 100}%)`;
-  bottomScreen.style.transform = `translateY(${progress * 100}%)`;
-});
+                // move away from center
+                topScreen.style.transform = `translateY(${-progress * 100}%)`;
+                bottomScreen.style.transform = `translateY(${progress * 100}%)`;
+                });
 
-</script>
-
-
+        </script>
     </body>
 </html>
