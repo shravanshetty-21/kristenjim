@@ -323,7 +323,7 @@ body {
 }
 
 .brands-side-heading {
-    margin-top: 50px;
+    margin-top: 65px;
     font-size: 72px;
     font-weight: 500;
     color: #000;
@@ -727,8 +727,8 @@ body {
 }
 
 .brands-image-frame {
-    width: 173.5px;
-    height: 56.19px;
+    width: 174px;
+    height: 80.23px;
     overflow: hidden;
     flex-shrink: 0;
 }
@@ -741,8 +741,8 @@ body {
 }
 
 .brands-cropped-image {
-    width: 76%;
-    height: 80%;
+    width: 174px;
+    height: 80.23px;
     /* object-fit: cover; */
     transition: transform 0.3s ease;
 }
