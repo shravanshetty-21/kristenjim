@@ -216,37 +216,39 @@
 
         </script>
 
-        <script>
-            function loadClarity() {
+        <script type="text/javascript">
             (function(c,l,a,r,i,t,y){
                 c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
                 t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
                 y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
             })(window, document, "clarity", "script", "sb8fez9soy");
 
-            clarity("consent");
-            }
+            // Disable data collection by default
+            clarity("consent", false);
 
-            document.addEventListener("DOMContentLoaded", function () {
-            if (!localStorage.getItem("cookieConsent")) {
-                document.getElementById("cookie-banner").style.display = "block";
-            }
+            // Wait for cookie banner choice
+            document.addEventListener("DOMContentLoaded", function() {
+                const banner = document.getElementById("cookie-banner");
+                const accepted = localStorage.getItem("cookies-accepted");
 
-            document.getElementById("accept-cookies").onclick = function () {
-                localStorage.setItem("cookieConsent", "granted");
-                document.getElementById("cookie-banner").style.display = "none";
-                loadClarity(); // ✅ Start Clarity only after consent
-            };
+                if (!accepted) {
+                    banner.style.display = "flex";
+                } else {
+                    if (typeof clarity === "function")
+                        clarity("consent", accepted === "true");
+                }
 
-            document.getElementById("decline-cookies").onclick = function () {
-                localStorage.setItem("cookieConsent", "denied");
-                document.getElementById("cookie-banner").style.display = "none";
-            };
+                document.getElementById("accept-cookies").addEventListener("click", function() {
+                    localStorage.setItem("cookies-accepted", "true");
+                    banner.style.display = "none";
+                    clarity("consent", true);
+                });
 
-            // If user already accepted cookies earlier
-            if (localStorage.getItem("cookieConsent") === "granted") {
-                loadClarity();
-            }
+                document.getElementById("decline-cookies").addEventListener("click", function() {
+                    localStorage.setItem("cookies-accepted", "false");
+                    banner.style.display = "none";
+                    clarity("consent", false);
+                });
             });
         </script>
     </body>
